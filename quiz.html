@@ -351,7 +351,6 @@
 <script>
 // ─── CONFIG ───────────────────────────────────────────────────────────────────
 const FORMSPREE_URL = 'https://formspree.io/f/xojoegvv';
-const ZAPIER_HOOK   = 'https://hooks.zapier.com/hooks/catch/28063476/42879wq/';
 // ─────────────────────────────────────────────────────────────────────────────
 
 const answers = {};
@@ -444,18 +443,6 @@ async function submitLead(e) {
         name, club, email, phone, details,
         quiz: quizSummary,
         _subject: `New 360Player Lead — ${name} (${club})`
-      })
-    });
-
-    // 2. Create Asana task via Zapier webhook
-    await fetch(ZAPIER_HOOK, {
-      method: 'POST',
-      body: JSON.stringify({
-        task_name: `360Player Lead — ${name} (${club})`,
-        name, club, email, phone: phone || 'not provided',
-        details: details || 'not provided',
-        quiz: quizSummary,
-        notes: taskNote
       })
     });
 
