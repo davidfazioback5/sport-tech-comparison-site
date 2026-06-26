@@ -327,7 +327,6 @@
         </div>
         <div class="review-card-footer">
           <a href="quiz.html" class="btn btn-outline btn-sm">Find Out More</a>
-          <a href="quiz.html" class="btn btn-primary btn-sm">Get Demo →</a>
         </div>
       </div>
 
@@ -454,7 +453,6 @@
         </div>
         <div class="review-card-footer">
           <a href="quiz.html" class="btn btn-outline btn-sm">Find Out More</a>
-          <a href="quiz.html" class="btn btn-primary btn-sm">Get Demo →</a>
         </div>
       </div>
 
@@ -481,7 +479,6 @@
         </div>
         <div class="review-card-footer">
           <a href="quiz.html" class="btn btn-outline btn-sm">Find Out More</a>
-          <a href="quiz.html" class="btn btn-primary btn-sm">Get Demo →</a>
         </div>
       </div>
 
@@ -508,7 +505,6 @@
         </div>
         <div class="review-card-footer">
           <a href="quiz.html" class="btn btn-outline btn-sm">Find Out More</a>
-          <a href="quiz.html" class="btn btn-primary btn-sm">Get Started →</a>
         </div>
       </div>
 
@@ -560,7 +556,6 @@
         </div>
         <div class="review-card-footer">
           <a href="quiz.html" class="btn btn-outline btn-sm">Find Out More</a>
-          <a href="quiz.html" class="btn btn-primary btn-sm">Get Demo →</a>
         </div>
       </div>
 
@@ -587,7 +582,6 @@
         </div>
         <div class="review-card-footer">
           <a href="quiz.html" class="btn btn-outline btn-sm">Find Out More</a>
-          <a href="quiz.html" class="btn btn-primary btn-sm">Get Demo →</a>
         </div>
       </div>
 
@@ -602,8 +596,8 @@
       <div class="eyebrow" style="color:#93c5fd;">Free Download</div>
       <h2>Get the Complete Club Tech Stack Checklist</h2>
       <p>A one-page PDF covering 28 questions to ask any vendor before you sign — includes pricing benchmarks and red flags to watch for.</p>
-      <form class="email-form" onsubmit="handleDownload(event)">
-        <input type="email" placeholder="your@email.com" required>
+      <form class="email-form" id="checklistForm" onsubmit="handleDownload(event)">
+        <input type="email" id="checklistEmail" placeholder="your@email.com" required>
         <button type="submit" class="btn btn-green">Send Me the PDF →</button>
       </form>
       <p style="margin-top:12px;font-size:.75rem;opacity:.6;">No spam. Unsubscribe any time.</p>
@@ -627,6 +621,7 @@
         <ul>
           <li><a href="club-management-software.html">Club Management</a></li>
           <li><a href="player-performance-tracking.html">Performance Tracking</a></li>
+          <li><a href="tournaments-competitions.html">Tournaments &amp; Competitions</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -671,11 +666,25 @@
 </style>
 
 <script>
-function handleDownload(e) {
+async function handleDownload(e) {
   e.preventDefault();
   const btn = e.target.querySelector('button');
-  btn.textContent = '✓ Check your inbox!';
+  const email = document.getElementById('checklistEmail').value;
+  btn.textContent = 'Sending...';
   btn.disabled = true;
+  try {
+    await fetch('https://formspree.io/f/xojoegvv', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        email,
+        _replyto: email,
+        _subject: 'Club Tech Stack Checklist Request',
+        message: 'Checklist PDF requested from homepage.'
+      })
+    });
+  } catch(err) { console.error(err); }
+  btn.textContent = '✓ Check your inbox!';
 }
 </script>
 <script src="js/main.js"></script>
