@@ -710,33 +710,7 @@ p:last-child { margin-bottom: 0; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .pros-cons-grid { grid-template-columns: 1fr; }
 }
-@media (max-width: 640px) {
-  .nav-links, .nav-cta { display: none; }
-  .hamburger { display: block; }
-  .nav-links.open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 64px;
-    left: 0; right: 0;
-    background: var(--bg-white);
-    border-bottom: 1px solid var(--border);
-    padding: 12px;
-    box-shadow: var(--shadow-md);
-  }
-  .hero { padding: 48px 0 40px; }
-  .hero-actions { flex-direction: column; }
-  .cta-banner { padding: 32px 24px; }
-  .cta-banner .email-form { flex-direction: column; }
-  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
-  .rating-bar-row { grid-template-columns: 120px 1fr 36px; }
-  .result-cards { grid-template-columns: 1fr; }
-  .score-overview { flex-direction: column; gap: 16px; }
-  .form-row { grid-template-columns: 1fr; }
-}
-
-/* Mobile nav toggle */
-.nav-open .nav-links { display: flex !important; flex-direction: column; }
+/* old mobile block removed — consolidated below */
 
 /* =====================================================
    MOBILE & TABLET IMPROVEMENTS
@@ -922,3 +896,6 @@ p:last-child { margin-bottom: 0; }
   .faq-question { padding: 14px 16px; font-size: .875rem; }
   .faq-answer p { padding: 0 16px 14px; }
 }
+
+/* Mobile nav toggle — triggered by JS adding nav-open to site-header */
+.nav-open .nav-links { display: flex !important; flex-direction: column; }
