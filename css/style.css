@@ -849,8 +849,10 @@ p:last-child { margin-bottom: 0; }
   .btn-full-mobile { width: 100%; justify-content: center; }
 
   /* Nav */
-  .nav-inner { gap: 0; }
-  .nav-links.open { z-index: 200; gap: 0; }
+  .nav-inner { gap: 0; padding: 0 16px; }
+  .nav-logo { flex: 1; }
+  .hamburger { margin-left: 0; }
+  .nav-links.open { z-index: 200; gap: 0; top: 64px; }
   .nav-links.open li a { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: .95rem; }
 
   /* Sidebar quiz CTA buttons */
