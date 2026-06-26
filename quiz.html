@@ -85,39 +85,20 @@
         </div>
       </div>
 
-      <!-- Step 2: Priority -->
+      <!-- Step 2: Features (multi-select) -->
       <div class="quiz-step" id="step-2">
         <div class="eyebrow">Question 2 of 5</div>
-        <div class="quiz-question">What's your club's biggest priority right now?</div>
-        <div class="quiz-options">
-          <div class="quiz-option" data-value="management" onclick="selectOption(this, 2)">
-            <span class="quiz-option-icon">📋</span>
-            <div class="quiz-option-text">
-              <strong>Club admin &amp; management</strong>
-              <span>Scheduling, availability, member comms, registrations</span>
-            </div>
-          </div>
-          <div class="quiz-option" data-value="performance" onclick="selectOption(this, 2)">
-            <span class="quiz-option-icon">📊</span>
-            <div class="quiz-option-text">
-              <strong>Player performance &amp; coaching data</strong>
-              <span>Training loads, development plans, video analysis</span>
-            </div>
-          </div>
-          <div class="quiz-option" data-value="both" onclick="selectOption(this, 2)">
-            <span class="quiz-option-icon">🎯</span>
-            <div class="quiz-option-text">
-              <strong>Both management and performance</strong>
-              <span>A complete platform covering admin and player development</span>
-            </div>
-          </div>
-          <div class="quiz-option" data-value="all" onclick="selectOption(this, 2)">
-            <span class="quiz-option-icon">🚀</span>
-            <div class="quiz-option-text">
-              <strong>Everything — we want it all</strong>
-              <span>Full-club solution for a serious, growing club</span>
-            </div>
-          </div>
+        <div class="quiz-question">What features does your club need? <span style="font-size:.85rem;font-weight:400;color:var(--text-muted);">Select all that apply</span></div>
+        <div class="quiz-options multi-select" id="options-2">
+          <div class="quiz-option" data-value="management" onclick="toggleOption(this, 2)"><span class="quiz-option-icon">📋</span><div class="quiz-option-text"><strong>Club admin &amp; management</strong><span>Scheduling, availability, member comms, registrations</span></div></div>
+          <div class="quiz-option" data-value="payments" onclick="toggleOption(this, 2)"><span class="quiz-option-icon">💳</span><div class="quiz-option-text"><strong>Payments</strong><span>Online fee collection, invoicing, financial reporting</span></div></div>
+          <div class="quiz-option" data-value="fixtures" onclick="toggleOption(this, 2)"><span class="quiz-option-icon">🏆</span><div class="quiz-option-text"><strong>Fixtures, leagues &amp; tournaments</strong><span>Draw management, ladders, live scores, results</span></div></div>
+          <div class="quiz-option" data-value="attendance" onclick="toggleOption(this, 2)"><span class="quiz-option-icon">✅</span><div class="quiz-option-text"><strong>Attendance records</strong><span>Track player and coach attendance at training &amp; games</span></div></div>
+          <div class="quiz-option" data-value="session" onclick="toggleOption(this, 2)"><span class="quiz-option-icon">🗓️</span><div class="quiz-option-text"><strong>Session planning</strong><span>Build and share training sessions and drill libraries</span></div></div>
+          <div class="quiz-option" data-value="crm" onclick="toggleOption(this, 2)"><span class="quiz-option-icon">👥</span><div class="quiz-option-text"><strong>Club CRM</strong><span>Member database, contact management, communications</span></div></div>
+          <div class="quiz-option" data-value="performance" onclick="toggleOption(this, 2)"><span class="quiz-option-icon">📊</span><div class="quiz-option-text"><strong>Player performance &amp; coaching data</strong><span>Training loads, GPS, development plans</span></div></div>
+          <div class="quiz-option" data-value="video" onclick="toggleOption(this, 2)"><span class="quiz-option-icon">🎥</span><div class="quiz-option-text"><strong>Video analytics</strong><span>Match and training video analysis tools</span></div></div>
+          <div class="quiz-option" data-value="training-library" onclick="toggleOption(this, 2)"><span class="quiz-option-icon">📚</span><div class="quiz-option-text"><strong>Training library</strong><span>Searchable drill and exercise content library</span></div></div>
         </div>
         <div class="quiz-nav">
           <button class="btn btn-outline" onclick="prevStep(1)">← Back</button>
@@ -133,14 +114,14 @@
           <div class="quiz-option" data-value="low" onclick="selectOption(this, 3)">
             <span class="quiz-option-icon">💵</span>
             <div class="quiz-option-text">
-              <strong>Up to $100/month</strong>
+              <strong>Up to A$100/month</strong>
               <span>Happy to pay for the right tool at a reasonable price</span>
             </div>
           </div>
           <div class="quiz-option" data-value="mid" onclick="selectOption(this, 3)">
             <span class="quiz-option-icon">💳</span>
             <div class="quiz-option-text">
-              <strong>$100–$300/month</strong>
+              <strong>A$100–A$300/month</strong>
               <span>Prepared to invest if the platform delivers clear value</span>
             </div>
           </div>
@@ -196,33 +177,21 @@
         <div class="eyebrow">Question 5 of 5</div>
         <div class="quiz-question">Where is your club based?</div>
         <div class="quiz-options">
-          <div class="quiz-option" data-value="aunz" onclick="selectOption(this, 5)">
+          <div class="quiz-option" data-value="australia" onclick="selectOption(this, 5)">
             <span class="quiz-option-icon">🇦🇺</span>
-            <div class="quiz-option-text">
-              <strong>Australia or New Zealand</strong>
-              <span>ANZ-based club or association</span>
-            </div>
+            <div class="quiz-option-text"><strong>Australia</strong><span>Australian club, association, or academy</span></div>
           </div>
-          <div class="quiz-option" data-value="europe" onclick="selectOption(this, 5)">
-            <span class="quiz-option-icon">🇪🇺</span>
-            <div class="quiz-option-text">
-              <strong>Europe (including UK)</strong>
-              <span>European club or academy</span>
-            </div>
+          <div class="quiz-option" data-value="newzealand" onclick="selectOption(this, 5)">
+            <span class="quiz-option-icon">🇳🇿</span>
+            <div class="quiz-option-text"><strong>New Zealand</strong><span>New Zealand-based club or association</span></div>
           </div>
-          <div class="quiz-option" data-value="northamerica" onclick="selectOption(this, 5)">
-            <span class="quiz-option-icon">🇺🇸</span>
-            <div class="quiz-option-text">
-              <strong>North America</strong>
-              <span>USA or Canada</span>
-            </div>
+          <div class="quiz-option" data-value="malaysia" onclick="selectOption(this, 5)">
+            <span class="quiz-option-icon">🇲🇾</span>
+            <div class="quiz-option-text"><strong>Malaysia</strong><span>Malaysian club, school, or sports organisation</span></div>
           </div>
-          <div class="quiz-option" data-value="other" onclick="selectOption(this, 5)">
-            <span class="quiz-option-icon">🌍</span>
-            <div class="quiz-option-text">
-              <strong>Rest of World</strong>
-              <span>Middle East, Africa, Asia-Pacific, other</span>
-            </div>
+          <div class="quiz-option" data-value="asiapacific" onclick="selectOption(this, 5)">
+            <span class="quiz-option-icon">🌏</span>
+            <div class="quiz-option-text"><strong>Rest of Asia Pacific</strong><span>Singapore, Indonesia, Philippines, Thailand, and beyond</span></div>
           </div>
         </div>
         <div class="quiz-nav">
@@ -242,7 +211,7 @@
           <div class="result-card top-pick" style="margin-bottom:24px;">
             <div class="rank">🏆 Best Match for Your Club</div>
             <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
-              <div class="platform-logo-placeholder" style="background:#1a56db;width:48px;height:48px;font-size:.9rem;">360</div>
+              <div class="platform-logo-placeholder" style="background:#1a56db;width:48px;height:48px;font-size:.9rem;"><img src="https://logo.clearbit.com/360player.com" alt="360" onerror="this.style.display='none'"></div>
               <div>
                 <h3 style="margin:0;font-size:1.3rem;">360Player</h3>
                 <div class="rating-line"><span class="stars">★★★★★</span> <span style="font-weight:700;">9.1/10 — Editor's Pick 2026</span></div>
@@ -363,6 +332,14 @@ function selectOption(el, step) {
   if (nextBtn) nextBtn.disabled = false;
 }
 
+function toggleOption(el, step) {
+  el.classList.toggle('selected');
+  const selected = el.closest('.quiz-options').querySelectorAll('.quiz-option.selected');
+  answers['q' + step] = Array.from(selected).map(o => o.dataset.value).join(', ');
+  const nextBtn = document.getElementById('next-' + step);
+  if (nextBtn) nextBtn.disabled = selected.length === 0;
+}
+
 function nextStep(n) {
   document.querySelector('.quiz-step.active').classList.remove('active');
   document.getElementById('step-' + n).classList.add('active');
@@ -392,10 +369,16 @@ function showResults() {
   const sizeLabel = { tiny: 'small', small: 'medium-sized', medium: 'large', pro: 'professional' }[size] || '';
   let reason = `For your ${sizeLabel} club, 360Player is the strongest fit. `;
 
-  if (['performance','both','all'].includes(priority)) {
+  const features = (priority || '').split(', ');
+  const wantsPerf = features.some(f => ['performance','video','training-library','session'].includes(f));
+  const wantsAdmin = features.some(f => ['management','payments','crm','attendance','fixtures'].includes(f));
+
+  if (wantsPerf && wantsAdmin) {
     reason += 'It pairs best-in-class player development tracking with full club management — no other platform integrates both at this depth. ';
+  } else if (wantsPerf) {
+    reason += 'It delivers video analytics, session planning, a full training library, and player development profiles all in one place. ';
   } else {
-    reason += 'It handles everything from scheduling and registrations to member communications in one clean platform. ';
+    reason += 'It handles everything from scheduling and registrations to member communications and payments in one clean platform. ';
   }
 
   if (perf === 'critical') {
@@ -406,8 +389,8 @@ function showResults() {
     reason += 'The platform scales with your club, so when you\'re ready to add performance tools they\'re already built in.';
   }
 
-  if (market === 'aunz') {
-    reason += ' 360Player has strong adoption across Australian and New Zealand clubs.';
+  if (['australia','newzealand','malaysia','asiapacific'].includes(market)) {
+    reason += ' 360Player has strong and growing adoption across the Asia Pacific region.';
   }
 
   document.getElementById('result-reason').textContent = reason;

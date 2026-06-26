@@ -339,7 +339,32 @@ p:last-child { margin-bottom: 0; }
   font-size: 1.3rem;
   font-weight: 800;
   color: #fff;
+  overflow: hidden;
+  flex-shrink: 0;
 }
+.platform-logo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+  background: #fff;
+  border-radius: 10px;
+}
+/* Multi-select quiz options */
+.quiz-options.multi-select { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.quiz-options.multi-select .quiz-option { position: relative; }
+.quiz-options.multi-select .quiz-option.selected::after {
+  content: '✓';
+  position: absolute;
+  top: 8px; right: 10px;
+  background: var(--brand-blue);
+  color: #fff;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  font-size: .75rem;
+  display: flex; align-items: center; justify-content: center;
+}
+@media (max-width: 600px) { .quiz-options.multi-select { grid-template-columns: 1fr; } }
 .review-card-body { padding: 20px 24px; }
 .review-card-body ul { list-style: none; margin-bottom: 16px; }
 .review-card-body ul li {
