@@ -349,10 +349,9 @@
 </footer>
 
 <script>
-// ─── CONFIG — fill in your credentials ───────────────────────────────────────
+// ─── CONFIG ───────────────────────────────────────────────────────────────────
 const FORMSPREE_URL = 'https://formspree.io/f/YOUR_FORM_ID'; // replace with your Formspree form ID
-const ASANA_PAT     = 'YOUR_ASANA_PERSONAL_ACCESS_TOKEN';    // replace with your Asana PAT
-const ASANA_PROJECT = 'YOUR_ASANA_PROJECT_GID';              // replace with your Asana project GID
+const ZAPIER_HOOK   = 'https://hooks.zapier.com/hooks/catch/28063476/42879wq/';
 // ─────────────────────────────────────────────────────────────────────────────
 
 const answers = {};
@@ -448,21 +447,15 @@ async function submitLead(e) {
       })
     });
 
-    // 2. Create Asana task
-    await fetch('https://app.asana.com/api/1.0/tasks', {
+    // 2. Create Asana task via Zapier webhook
+    await fetch(ZAPIER_HOOK, {
       method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${ASANA_PAT}`,
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      },
       body: JSON.stringify({
-        data: {
-          name: `360Player Lead — ${name} (${club})`,
-          notes: taskNote,
-          projects: [ASANA_PROJECT],
-          due_on: new Date(Date.now() + 86400000).toISOString().split('T')[0] // due tomorrow
-        }
+        task_name: `360Player Lead — ${name} (${club})`,
+        name, club, email, phone: phone || 'not provided',
+        details: details || 'not provided',
+        quiz: quizSummary,
+        notes: taskNote
       })
     });
 
