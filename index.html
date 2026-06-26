@@ -265,6 +265,74 @@
       
 </section>
 
+<!-- ===== FAQ ===== -->
+<section class="section" style="background:var(--bg-white);">
+  <div class="container">
+    <div class="section-header" style="text-align:center;">
+      <div class="eyebrow">FAQ</div>
+      <h2>Frequently asked questions</h2>
+      <p style="max-width:520px;margin:0 auto;">Everything clubs ask us before choosing a platform.</p>
+    </div>
+    <div class="faq-list" style="max-width:760px;margin:0 auto;">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          How do you score platforms? <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-answer">
+          <p>We evaluate each platform across six categories: Club Management, Performance Tracking, Monetisation, Ease of Use, Value for Money, and Customer Support. Each category is scored out of 10 by our team based on hands-on testing, feature audits, and published documentation. The overall score is a weighted average. We do not accept payment from platforms to influence scores.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          Is this website free to use? <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes — completely free. We built ClubTech Compare to help sports clubs make better technology decisions without sitting through endless vendor demos. The quiz, reviews, and comparison tables are all free with no registration required.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          Which platform is best for a small grassroots club? <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-answer">
+          <p>For small grassroots clubs, <strong>Spond</strong> is a great free starting point for scheduling and communications. <strong>TidyHQ</strong> is our top pick if you need online membership and payments from A$29/month. <strong>360Player</strong> is worth considering if you want to add performance tracking as you grow. Take our quiz for a personalised recommendation based on your specific needs.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          Do platforms work in Australia and New Zealand? <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-answer">
+          <p>Yes — our reviews are specifically focused on the AU/NZ/Asia Pacific market. We flag which platforms have local support, accept AUD/NZD payments, and are used by clubs in the region. Platforms like <strong>360Player</strong>, <strong>Revolutionise</strong>, and <strong>TidyHQ</strong> all have strong AU/NZ user bases.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          Can I use more than one platform at the same time? <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-answer">
+          <p>Absolutely — most clubs use a combination. A common stack is a club management platform (like 360Player or TidyHQ) for admin and communications, paired with a performance tool (like XPS Network) for coaching data. Our quiz helps you identify which combination makes sense for your club size and budget.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)" aria-expanded="false">
+          How often are reviews updated? <span class="faq-icon">＋</span>
+        </button>
+        <div class="faq-answer">
+          <p>We review and update scores at least twice a year, or whenever a platform releases a major update that changes its feature set or pricing. All reviews show the last updated date at the top of the page.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ===== GATED LEAD GEN ===== -->
 <section class="section" style="background:var(--bg-white);">
   <div class="container">
@@ -361,5 +429,41 @@ async function handleDownload(e) {
 }
 </script>
 <script src="js/main.js"></script>
+
+<!-- ===== GOOGLE ANALYTICS ===== -->
+<!-- Replace GA_MEASUREMENT_ID with your real G-XXXXXXXXXX ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'GA_MEASUREMENT_ID');
+
+  // Track quiz completions as a conversion event
+  function trackQuizStart() { gtag('event', 'quiz_start', { event_category: 'engagement' }); }
+  function trackQuizComplete(platform) { gtag('event', 'quiz_complete', { event_category: 'conversion', event_label: platform }); }
+  function trackLeadSubmit() { gtag('event', 'lead_submit', { event_category: 'conversion' }); }
+</script>
+
+<!-- FAQ accordion -->
+<script>
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const icon = btn.querySelector('.faq-icon');
+  const isOpen = btn.getAttribute('aria-expanded') === 'true';
+  // Close all
+  document.querySelectorAll('.faq-question').forEach(b => {
+    b.setAttribute('aria-expanded', 'false');
+    b.nextElementSibling.style.maxHeight = null;
+    b.querySelector('.faq-icon').textContent = '＋';
+  });
+  // Open this one if it was closed
+  if (!isOpen) {
+    btn.setAttribute('aria-expanded', 'true');
+    answer.style.maxHeight = answer.scrollHeight + 'px';
+    icon.textContent = '－';
+  }
+}
+</script>
 </body>
 </html>
