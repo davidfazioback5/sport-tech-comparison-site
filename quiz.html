@@ -28,7 +28,7 @@
   <div class="container" style="text-align:center;">
     <div class="eyebrow" style="color:#93c5fd;text-align:center;">Platform Discovery</div>
     <h1>Find Your Perfect Platform</h1>
-    <p style="max-width:520px;margin:12px auto 0;">5 questions. 2 minutes. A personalised recommendation matched to your club's size, priorities, and goals.</p>
+    <p style="max-width:520px;margin:12px auto 0;">4 questions. 2 minutes. A personalised recommendation matched to your club's size, priorities, and goals.</p>
   </div>
 </div>
 
@@ -42,12 +42,11 @@
         <div class="quiz-progress-dot" id="dot-2"></div>
         <div class="quiz-progress-dot" id="dot-3"></div>
         <div class="quiz-progress-dot" id="dot-4"></div>
-        <div class="quiz-progress-dot" id="dot-5"></div>
       </div>
 
       <!-- Step 1: Club Size -->
       <div class="quiz-step active" id="step-1">
-        <div class="eyebrow">Question 1 of 5</div>
+        <div class="eyebrow">Question 1 of 4</div>
         <div class="quiz-question">How big is your club?</div>
         <div class="quiz-options">
           <div class="quiz-option" data-value="tiny" onclick="selectOption(this, 1)">
@@ -87,7 +86,7 @@
 
       <!-- Step 2: Features (multi-select) -->
       <div class="quiz-step" id="step-2">
-        <div class="eyebrow">Question 2 of 5</div>
+        <div class="eyebrow">Question 2 of 4</div>
         <div class="quiz-question">What features does your club need? <span style="font-size:.85rem;font-weight:400;color:var(--text-muted);">Select all that apply</span></div>
         <div class="quiz-options multi-select" id="options-2">
           <div class="quiz-option" data-value="management" onclick="toggleOption(this, 2)"><span class="quiz-option-icon">📋</span><div class="quiz-option-text"><strong>Club admin &amp; management</strong><span>Scheduling, availability, member comms, registrations</span></div></div>
@@ -108,7 +107,7 @@
 
       <!-- Step 3: Budget -->
       <div class="quiz-step" id="step-3">
-        <div class="eyebrow">Question 3 of 5</div>
+        <div class="eyebrow">Question 3 of 4</div>
         <div class="quiz-question">What's your approximate monthly budget for software?</div>
         <div class="quiz-options">
           <div class="quiz-option" data-value="low" onclick="selectOption(this, 3)">
@@ -139,42 +138,9 @@
         </div>
       </div>
 
-      <!-- Step 4: Performance tracking -->
+      <!-- Step 4: Location -->
       <div class="quiz-step" id="step-4">
-        <div class="eyebrow">Question 4 of 5</div>
-        <div class="quiz-question">How important is player development tracking to your coaching team?</div>
-        <div class="quiz-options">
-          <div class="quiz-option" data-value="critical" onclick="selectOption(this, 4)">
-            <span class="quiz-option-icon">🔬</span>
-            <div class="quiz-option-text">
-              <strong>Critical — it's a core part of how we coach</strong>
-              <span>We need detailed profiles, load data, video, and development plans</span>
-            </div>
-          </div>
-          <div class="quiz-option" data-value="useful" onclick="selectOption(this, 4)">
-            <span class="quiz-option-icon">📈</span>
-            <div class="quiz-option-text">
-              <strong>Useful — we'd use it if it was integrated</strong>
-              <span>We'd love data but don't want to manage a separate system</span>
-            </div>
-          </div>
-          <div class="quiz-option" data-value="secondary" onclick="selectOption(this, 4)">
-            <span class="quiz-option-icon">📋</span>
-            <div class="quiz-option-text">
-              <strong>Secondary — admin is more pressing</strong>
-              <span>Managing the club efficiently comes first right now</span>
-            </div>
-          </div>
-        </div>
-        <div class="quiz-nav">
-          <button class="btn btn-outline" onclick="prevStep(3)">← Back</button>
-          <button class="btn btn-primary" onclick="nextStep(5)" disabled id="next-4">Next →</button>
-        </div>
-      </div>
-
-      <!-- Step 5: Market -->
-      <div class="quiz-step" id="step-5">
-        <div class="eyebrow">Question 5 of 5</div>
+        <div class="eyebrow">Question 4 of 4</div>
         <div class="quiz-question">Where is your club based?</div>
         <div class="quiz-options">
           <div class="quiz-option" data-value="australia" onclick="selectOption(this, 5)">
@@ -195,8 +161,8 @@
           </div>
         </div>
         <div class="quiz-nav">
-          <button class="btn btn-outline" onclick="prevStep(4)">← Back</button>
-          <button class="btn btn-green btn-lg" onclick="showResults()" disabled id="next-5">See My Result →</button>
+          <button class="btn btn-outline" onclick="prevStep(3)">← Back</button>
+          <button class="btn btn-green btn-lg" onclick="showResults()" disabled id="next-4">See My Result →</button>
         </div>
       </div>
 
@@ -270,7 +236,9 @@
           <div id="successSection" style="display:none;text-align:center;padding:32px;background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #86efac;border-radius:var(--radius-lg);">
             <div style="font-size:2.5rem;margin-bottom:12px;">✅</div>
             <h3 style="color:#15803d;margin-bottom:8px;">You're all set!</h3>
-            <p style="color:#166534;">The 360Player team has been notified and will be in touch within 1 business day. Check your inbox for a confirmation.</p>
+            <p style="color:#166534;margin-bottom:20px;">The 360Player team has been notified and will be in touch within 1 business day. A confirmation has been sent to your email.</p>
+            <a href="https://meetings-eu1.hubspot.com/david-fazio?uuid=d66b471f-ccc6-4745-b1cd-9a15890cc106" target="_blank" class="btn btn-primary" style="display:inline-flex;margin-bottom:12px;">📅 Book a Meeting Now →</a>
+            <p style="font-size:.8rem;color:#166534;margin:0;">Prefer email? Reach us at <a href="mailto:dave@back5.com.au" style="color:#15803d;font-weight:600;">dave@back5.com.au</a></p>
           </div>
 
           <button class="btn btn-outline" style="margin-top:16px;width:100%;justify-content:center;" onclick="restartQuiz()">← Start Again</button>
@@ -353,7 +321,7 @@ function prevStep(n) {
 }
 
 function updateProgress(current) {
-  for (let i = 1; i <= 5; i++) {
+  for (let i = 1; i <= 4; i++) {
     const dot = document.getElementById('dot-' + i);
     dot.classList.toggle('done', i < current);
   }
@@ -363,8 +331,7 @@ function showResults() {
   // Build a personalised reason based on answers
   const size = answers.q1;
   const priority = answers.q2;
-  const perf = answers.q4;
-  const market = answers.q5;
+  const market = answers.q4;
 
   const sizeLabel = { tiny: 'small', small: 'medium-sized', medium: 'large', pro: 'professional' }[size] || '';
   let reason = `For your ${sizeLabel} club, 360Player is the strongest fit. `;
@@ -379,14 +346,6 @@ function showResults() {
     reason += 'It delivers video analytics, session planning, a full training library, and player development profiles all in one place. ';
   } else {
     reason += 'It handles everything from scheduling and registrations to member communications and payments in one clean platform. ';
-  }
-
-  if (perf === 'critical') {
-    reason += 'With coaching data as a priority, you\'ll get the most from 360Player\'s development profiles, video tools, and load tracking.';
-  } else if (perf === 'useful') {
-    reason += 'The built-in performance tools mean you get player development data without managing a second system.';
-  } else {
-    reason += 'The platform scales with your club, so when you\'re ready to add performance tools they\'re already built in.';
   }
 
   if (['australia','newzealand','malaysia','asiapacific'].includes(market)) {
@@ -414,7 +373,7 @@ async function submitLead(e) {
   btn.disabled = true;
   btn.textContent = 'Sending...';
 
-  const quizSummary = `Size: ${answers.q1 || '—'} | Priority: ${answers.q2 || '—'} | Budget: ${answers.q3 || '—'} | Performance: ${answers.q4 || '—'} | Market: ${answers.q5 || '—'}`;
+  const quizSummary = `Size: ${answers.q1 || '—'} | Features: ${answers.q2 || '—'} | Budget: ${answers.q3 || '—'} | Location: ${answers.q4 || '—'}`;
   const taskNote = `New 360Player lead from ClubTechCompare\n\nName: ${name}\nClub: ${club}\nEmail: ${email}\nPhone: ${phone || 'not provided'}\nDetails: ${details || 'not provided'}\n\nQuiz answers: ${quizSummary}`;
 
   try {
@@ -425,7 +384,8 @@ async function submitLead(e) {
       body: JSON.stringify({
         name, club, email, phone, details,
         quiz: quizSummary,
-        _subject: `New 360Player Lead — ${name} (${club})`
+        _subject: `New 360Player Lead — ${name} (${club})`,
+        _replyto: email
       })
     });
 
