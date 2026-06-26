@@ -736,7 +736,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* Mobile nav toggle */
-.nav-open .nav-links { display: flex !important; }
+.nav-open .nav-links { display: flex !important; flex-direction: column; }
 
 /* =====================================================
    MOBILE & TABLET IMPROVEMENTS
@@ -759,6 +759,31 @@ p:last-child { margin-bottom: 0; }
 @media (max-width: 640px) {
   /* Container padding */
   .container { padding: 0 16px; }
+
+  /* ── Mobile nav complete fix ── */
+  .site-header { position: relative; }
+  .nav-inner { display: flex; align-items: center; padding: 0 16px; height: 64px; gap: 0; }
+  .nav-logo { flex: 1; font-size: 1.1rem; }
+  .nav-cta { display: none !important; }
+  .hamburger { display: flex !important; flex-direction: column; justify-content: center; gap: 5px; margin-left: 12px; padding: 8px; flex-shrink: 0; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: var(--bg-white);
+    border-bottom: 2px solid var(--border);
+    box-shadow: 0 8px 24px rgba(0,0,0,.12);
+    flex-direction: column;
+    z-index: 999;
+    padding: 8px 0;
+    gap: 0;
+  }
+  .nav-links li { width: 100%; }
+  .nav-links a { display: block; padding: 13px 20px; font-size: 1rem; border-bottom: 1px solid var(--border); width: 100%; }
+  .nav-links li:last-child a { border-bottom: none; }
 
   /* Typography scale-down */
   h1 { font-size: 1.7rem; }
@@ -849,11 +874,7 @@ p:last-child { margin-bottom: 0; }
   .btn-full-mobile { width: 100%; justify-content: center; }
 
   /* Nav */
-  .nav-inner { gap: 0; padding: 0 16px; }
-  .nav-logo { flex: 1; }
-  .hamburger { margin-left: 0; }
-  .nav-links.open { z-index: 200; gap: 0; top: 64px; }
-  .nav-links.open li a { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: .95rem; }
+
 
   /* Sidebar quiz CTA buttons */
   #demo .btn { width: auto; min-width: 200px; }
