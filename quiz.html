@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Find My Platform — Sports Club Tech Finder Quiz | ClubTech Compare</title>
-  <meta name="description" content="Answer 5 quick questions and get a personalised shortlist of sports club management platforms matched to your needs.">
+  <title>Find My Platform — Sports Club Tech Finder | ClubTech Compare</title>
+  <meta name="description" content="Answer 5 quick questions and get a personalised sports club platform recommendation matched to your club's needs.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -17,19 +17,18 @@
     <ul class="nav-links">
       <li><a href="club-management-software.html">Club Management</a></li>
       <li><a href="player-performance-tracking.html">Performance Tracking</a></li>
-      <li><a href="club-monetisation-platforms.html">Monetisation</a></li>
-      <li><a href="monetisation-services.html">Our Services</a></li>
       <li><a href="quiz.html" class="active">Find My Platform →</a></li>
     </ul>
+    <a href="quiz.html" class="btn btn-primary btn-sm nav-cta">Find My Platform</a>
     <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 
 <div class="page-hero" style="padding:48px 0;">
   <div class="container" style="text-align:center;">
-    <div class="eyebrow" style="color:#93c5fd;text-align:center;">Buyer's Guide</div>
+    <div class="eyebrow" style="color:#93c5fd;text-align:center;">Platform Discovery</div>
     <h1>Find Your Perfect Platform</h1>
-    <p style="max-width:520px;margin:12px auto 0;">5 questions. 2 minutes. A personalised shortlist matched to your club's size, priorities, and budget.</p>
+    <p style="max-width:520px;margin:12px auto 0;">5 questions. 2 minutes. A personalised recommendation matched to your club's size, priorities, and goals.</p>
   </div>
 </div>
 
@@ -105,18 +104,18 @@
               <span>Training loads, development plans, video analysis</span>
             </div>
           </div>
-          <div class="quiz-option" data-value="revenue" onclick="selectOption(this, 2)">
-            <span class="quiz-option-icon">💰</span>
+          <div class="quiz-option" data-value="both" onclick="selectOption(this, 2)">
+            <span class="quiz-option-icon">🎯</span>
             <div class="quiz-option-text">
-              <strong>Fan engagement &amp; commercial revenue</strong>
-              <span>Sponsorship, fan loyalty, digital advertising income</span>
+              <strong>Both management and performance</strong>
+              <span>A complete platform covering admin and player development</span>
             </div>
           </div>
           <div class="quiz-option" data-value="all" onclick="selectOption(this, 2)">
-            <span class="quiz-option-icon">🎯</span>
+            <span class="quiz-option-icon">🚀</span>
             <div class="quiz-option-text">
-              <strong>All of the above — we need it all</strong>
-              <span>A complete platform covering management, performance &amp; revenue</span>
+              <strong>Everything — we want it all</strong>
+              <span>Full-club solution for a serious, growing club</span>
             </div>
           </div>
         </div>
@@ -131,31 +130,24 @@
         <div class="eyebrow">Question 3 of 5</div>
         <div class="quiz-question">What's your approximate monthly budget for software?</div>
         <div class="quiz-options">
-          <div class="quiz-option" data-value="free" onclick="selectOption(this, 3)">
-            <span class="quiz-option-icon">🆓</span>
-            <div class="quiz-option-text">
-              <strong>Free — we need no-cost tools only</strong>
-              <span>Budget is very tight or this is a volunteer-run club</span>
-            </div>
-          </div>
           <div class="quiz-option" data-value="low" onclick="selectOption(this, 3)">
             <span class="quiz-option-icon">💵</span>
             <div class="quiz-option-text">
-              <strong>Low — up to €50/month</strong>
+              <strong>Up to $100/month</strong>
               <span>Happy to pay for the right tool at a reasonable price</span>
             </div>
           </div>
           <div class="quiz-option" data-value="mid" onclick="selectOption(this, 3)">
             <span class="quiz-option-icon">💳</span>
             <div class="quiz-option-text">
-              <strong>Mid — €50–200/month</strong>
+              <strong>$100–$300/month</strong>
               <span>Prepared to invest if the platform delivers clear value</span>
             </div>
           </div>
           <div class="quiz-option" data-value="high" onclick="selectOption(this, 3)">
             <span class="quiz-option-icon">🏦</span>
             <div class="quiz-option-text">
-              <strong>Flexible — ROI is more important than price</strong>
+              <strong>Flexible — ROI matters more than price</strong>
               <span>We'll pay for a platform that genuinely moves the needle</span>
             </div>
           </div>
@@ -166,30 +158,30 @@
         </div>
       </div>
 
-      <!-- Step 4: GPS / Hardware -->
+      <!-- Step 4: Performance tracking -->
       <div class="quiz-step" id="step-4">
         <div class="eyebrow">Question 4 of 5</div>
-        <div class="quiz-question">Do you need GPS tracking hardware for players?</div>
+        <div class="quiz-question">How important is player development tracking to your coaching team?</div>
         <div class="quiz-options">
-          <div class="quiz-option" data-value="yes_gps" onclick="selectOption(this, 4)">
-            <span class="quiz-option-icon">📡</span>
+          <div class="quiz-option" data-value="critical" onclick="selectOption(this, 4)">
+            <span class="quiz-option-icon">🔬</span>
             <div class="quiz-option-text">
-              <strong>Yes — physical GPS tracking is essential</strong>
-              <span>We need real wearable load data during training and matches</span>
+              <strong>Critical — it's a core part of how we coach</strong>
+              <span>We need detailed profiles, load data, video, and development plans</span>
             </div>
           </div>
-          <div class="quiz-option" data-value="software_only" onclick="selectOption(this, 4)">
-            <span class="quiz-option-icon">💻</span>
+          <div class="quiz-option" data-value="useful" onclick="selectOption(this, 4)">
+            <span class="quiz-option-icon">📈</span>
             <div class="quiz-option-text">
-              <strong>No — software-based tracking is fine</strong>
-              <span>App-based self-reporting and coach data entry works for us</span>
+              <strong>Useful — we'd use it if it was integrated</strong>
+              <span>We'd love data but don't want to manage a separate system</span>
             </div>
           </div>
-          <div class="quiz-option" data-value="not_needed" onclick="selectOption(this, 4)">
-            <span class="quiz-option-icon">❌</span>
+          <div class="quiz-option" data-value="secondary" onclick="selectOption(this, 4)">
+            <span class="quiz-option-icon">📋</span>
             <div class="quiz-option-text">
-              <strong>We don't need performance tracking at all</strong>
-              <span>Management and/or commercial tools are our focus</span>
+              <strong>Secondary — admin is more pressing</strong>
+              <span>Managing the club efficiently comes first right now</span>
             </div>
           </div>
         </div>
@@ -204,18 +196,18 @@
         <div class="eyebrow">Question 5 of 5</div>
         <div class="quiz-question">Where is your club based?</div>
         <div class="quiz-options">
-          <div class="quiz-option" data-value="uk" onclick="selectOption(this, 5)">
-            <span class="quiz-option-icon">🇬🇧</span>
+          <div class="quiz-option" data-value="aunz" onclick="selectOption(this, 5)">
+            <span class="quiz-option-icon">🇦🇺</span>
             <div class="quiz-option-text">
-              <strong>UK</strong>
-              <span>England, Scotland, Wales, Northern Ireland</span>
+              <strong>Australia or New Zealand</strong>
+              <span>ANZ-based club or association</span>
             </div>
           </div>
           <div class="quiz-option" data-value="europe" onclick="selectOption(this, 5)">
             <span class="quiz-option-icon">🇪🇺</span>
             <div class="quiz-option-text">
-              <strong>Europe (outside UK)</strong>
-              <span>EU, Scandinavia, and other European markets</span>
+              <strong>Europe (including UK)</strong>
+              <span>European club or academy</span>
             </div>
           </div>
           <div class="quiz-option" data-value="northamerica" onclick="selectOption(this, 5)">
@@ -229,38 +221,87 @@
             <span class="quiz-option-icon">🌍</span>
             <div class="quiz-option-text">
               <strong>Rest of World</strong>
-              <span>Australia, Middle East, Africa, Asia-Pacific, etc.</span>
+              <span>Middle East, Africa, Asia-Pacific, other</span>
             </div>
           </div>
         </div>
         <div class="quiz-nav">
           <button class="btn btn-outline" onclick="prevStep(4)">← Back</button>
-          <button class="btn btn-green btn-lg" onclick="showResults()" disabled id="next-5">See My Results →</button>
+          <button class="btn btn-green btn-lg" onclick="showResults()" disabled id="next-5">See My Result →</button>
         </div>
       </div>
 
-      <!-- Results -->
+      <!-- Results: always 360Player -->
       <div class="quiz-step" id="step-results">
         <div class="quiz-result">
-          <div class="eyebrow" style="text-align:center;">Your Results</div>
-          <h2>Here's your personalised shortlist</h2>
-          <p>Based on your answers, these are the platforms most likely to fit your club.</p>
+          <div class="eyebrow" style="text-align:center;color:#16a34a;">✓ Analysis Complete</div>
+          <h2 style="text-align:center;">Your #1 Recommended Platform</h2>
+          <p style="text-align:center;color:var(--text-muted);margin-bottom:24px;">Based on your club's profile, one platform stands out clearly.</p>
 
-          <div class="result-cards" id="resultCards">
-            <!-- Populated by JS -->
+          <!-- 360Player result card -->
+          <div class="result-card top-pick" style="margin-bottom:24px;">
+            <div class="rank">🏆 Best Match for Your Club</div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+              <div class="platform-logo-placeholder" style="background:#1a56db;width:48px;height:48px;font-size:.9rem;">360</div>
+              <div>
+                <h3 style="margin:0;font-size:1.3rem;">360Player</h3>
+                <div class="rating-line"><span class="stars">★★★★★</span> <span style="font-weight:700;">9.1/10 — Editor's Pick 2026</span></div>
+              </div>
+            </div>
+            <div id="result-reason" style="background:rgba(26,86,219,.07);border-left:3px solid #1a56db;padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:16px;font-size:.9rem;line-height:1.6;">
+              <!-- Populated by JS -->
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;font-size:.85rem;">
+              <div style="display:flex;align-items:center;gap:6px;"><span style="color:#16a34a;font-weight:700;">✓</span> Club management &amp; admin</div>
+              <div style="display:flex;align-items:center;gap:6px;"><span style="color:#16a34a;font-weight:700;">✓</span> Player development profiles</div>
+              <div style="display:flex;align-items:center;gap:6px;"><span style="color:#16a34a;font-weight:700;">✓</span> Video analysis built-in</div>
+              <div style="display:flex;align-items:center;gap:6px;"><span style="color:#16a34a;font-weight:700;">✓</span> Scheduling &amp; communication</div>
+              <div style="display:flex;align-items:center;gap:6px;"><span style="color:#16a34a;font-weight:700;">✓</span> Coach &amp; player mobile app</div>
+              <div style="display:flex;align-items:center;gap:6px;"><span style="color:#16a34a;font-weight:700;">✓</span> White-label &amp; API access</div>
+            </div>
           </div>
 
-          <div style="background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;text-align:left;">
-            <h4 style="margin-bottom:8px;">Want a human second opinion?</h4>
-            <p style="font-size:.875rem;color:var(--text-muted);margin-bottom:16px;">Tell us a bit more and we'll send you a personalised recommendation — plus any pricing benchmarks relevant to your club size.</p>
-            <form id="quizLeadForm" style="display:flex;flex-direction:column;gap:12px;">
+          <!-- Confirmation gate -->
+          <div id="confirmSection" style="background:var(--bg-white);border:2px solid #1a56db;border-radius:var(--radius-lg);padding:28px;">
+            <h4 style="margin-bottom:6px;">Would you like 360Player to contact you?</h4>
+            <p style="font-size:.875rem;color:var(--text-muted);margin-bottom:20px;">Their team will reach out within 1 business day with a demo tailored to your club's profile — no hard sell, no obligation.</p>
+            <form id="leadForm" onsubmit="submitLead(event)" style="display:flex;flex-direction:column;gap:14px;">
               <div class="form-row">
-                <div class="form-group" style="margin-bottom:0;"><label>Name</label><input type="text" placeholder="Your name" required></div>
-                <div class="form-group" style="margin-bottom:0;"><label>Email</label><input type="email" placeholder="your@email.com" required></div>
+                <div class="form-group" style="margin-bottom:0;">
+                  <label>First Name *</label>
+                  <input type="text" id="lead-name" placeholder="Your name" required>
+                </div>
+                <div class="form-group" style="margin-bottom:0;">
+                  <label>Club Name *</label>
+                  <input type="text" id="lead-club" placeholder="City FC" required>
+                </div>
               </div>
-              <div class="form-group" style="margin-bottom:0;"><label>Club Name</label><input type="text" placeholder="City FC" required></div>
-              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Me My Recommendation →</button>
+              <div class="form-row">
+                <div class="form-group" style="margin-bottom:0;">
+                  <label>Email *</label>
+                  <input type="email" id="lead-email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group" style="margin-bottom:0;">
+                  <label>Phone (optional)</label>
+                  <input type="tel" id="lead-phone" placeholder="+61 400 000 000">
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom:0;">
+                <label>Club size &amp; location (optional)</label>
+                <input type="text" id="lead-details" placeholder="e.g. 300 members, Sydney, football">
+              </div>
+              <button type="submit" class="btn btn-primary" id="leadSubmitBtn" style="width:100%;justify-content:center;font-size:1rem;padding:14px;">
+                Yes — Connect Me with 360Player →
+              </button>
+              <p style="font-size:.75rem;color:var(--text-muted);text-align:center;margin:0;">Your details are shared only with 360Player. No spam, unsubscribe any time.</p>
             </form>
+          </div>
+
+          <!-- Success state (hidden initially) -->
+          <div id="successSection" style="display:none;text-align:center;padding:32px;background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #86efac;border-radius:var(--radius-lg);">
+            <div style="font-size:2.5rem;margin-bottom:12px;">✅</div>
+            <h3 style="color:#15803d;margin-bottom:8px;">You're all set!</h3>
+            <p style="color:#166534;">The 360Player team has been notified and will be in touch within 1 business day. Check your inbox for a confirmation.</p>
           </div>
 
           <button class="btn btn-outline" style="margin-top:16px;width:100%;justify-content:center;" onclick="restartQuiz()">← Start Again</button>
@@ -282,19 +323,22 @@
       <div class="footer-col"><h5>Categories</h5><ul>
         <li><a href="club-management-software.html">Club Management</a></li>
         <li><a href="player-performance-tracking.html">Performance Tracking</a></li>
-        <li><a href="club-monetisation-platforms.html">Monetisation Tools</a></li>
       </ul></div>
       <div class="footer-col"><h5>Reviews</h5><ul>
         <li><a href="reviews/review-360player.html">360Player</a></li>
-        <li><a href="reviews/review-back5.html">Back5</a></li>
         <li><a href="reviews/review-spond.html">Spond</a></li>
         <li><a href="reviews/review-teamsnap.html">TeamSnap</a></li>
         <li><a href="reviews/review-pitchero.html">Pitchero</a></li>
         <li><a href="reviews/review-playertek.html">Playertek</a></li>
+        <li><a href="reviews/review-xps.html">XPS Network</a></li>
+        <li><a href="reviews/review-revolutionise.html">Revolutionise</a></li>
+        <li><a href="reviews/review-tidyhq.html">TidyHQ</a></li>
+        <li><a href="reviews/review-teamstack.html">TeamStack</a></li>
+        <li><a href="reviews/review-squdi.html">Squdi</a></li>
+        <li><a href="reviews/review-dribl.html">Dribl</a></li>
       </ul></div>
       <div class="footer-col"><h5>Resources</h5><ul>
         <li><a href="quiz.html">Platform Finder Quiz</a></li>
-        <li><a href="monetisation-services.html">Our Services</a></li>
       </ul></div>
     </div>
     <div class="footer-bottom">
@@ -305,7 +349,12 @@
 </footer>
 
 <script>
-// Quiz state
+// ─── CONFIG — fill in your credentials ───────────────────────────────────────
+const FORMSPREE_URL = 'https://formspree.io/f/YOUR_FORM_ID'; // replace with your Formspree form ID
+const ASANA_PAT     = 'YOUR_ASANA_PERSONAL_ACCESS_TOKEN';    // replace with your Asana PAT
+const ASANA_PROJECT = 'YOUR_ASANA_PROJECT_GID';              // replace with your Asana project GID
+// ─────────────────────────────────────────────────────────────────────────────
+
 const answers = {};
 
 function selectOption(el, step) {
@@ -335,131 +384,95 @@ function updateProgress(current) {
   }
 }
 
-function getScore(platform) {
-  const { q1: size, q2: priority, q3: budget, q4: gps, q5: market } = answers;
-  let score = 0;
-
-  if (platform === '360Player') {
-    if (['medium','pro'].includes(size)) score += 3;
-    if (['performance','all'].includes(priority)) score += 4;
-    if (['mid','high'].includes(budget)) score += 2;
-    if (['software_only','yes_gps'].includes(gps)) score += 2;
-    if (['europe','uk','other'].includes(market)) score += 1;
-  }
-  if (platform === 'Back5') {
-    if (['small','medium','pro'].includes(size)) score += 2;
-    if (['revenue','all'].includes(priority)) score += 5;
-    if (['mid','high'].includes(budget)) score += 2;
-    if (['not_needed','software_only'].includes(gps)) score += 1;
-  }
-  if (platform === 'Spond') {
-    if (['tiny','small'].includes(size)) score += 4;
-    if (['management'].includes(priority)) score += 3;
-    if (['free','low'].includes(budget)) score += 4;
-    if (['not_needed'].includes(gps)) score += 2;
-  }
-  if (platform === 'TeamSnap') {
-    if (['small','medium'].includes(size)) score += 3;
-    if (['management','all'].includes(priority)) score += 2;
-    if (['low','mid'].includes(budget)) score += 2;
-    if (['northamerica'].includes(market)) score += 3;
-  }
-  if (platform === 'Pitchero') {
-    if (['tiny','small','medium'].includes(size)) score += 2;
-    if (['management','revenue'].includes(priority)) score += 2;
-    if (['low','mid'].includes(budget)) score += 2;
-    if (['uk'].includes(market)) score += 4;
-  }
-  if (platform === 'Playertek') {
-    if (['yes_gps'].includes(gps)) score += 6;
-    if (['performance'].includes(priority)) score += 3;
-    if (['high'].includes(budget)) score += 2;
-    if (['pro'].includes(size)) score += 2;
-  }
-  return score;
-}
-
-const platformData = {
-  '360Player': {
-    color: '#1a56db',
-    abbr: '360',
-    desc: 'Best-in-class performance tracking &amp; club management for academies and semi-pro clubs.',
-    url: 'reviews/review-360player.html',
-    score: '9.1',
-    cta: 'Get Demo'
-  },
-  'Back5': {
-    color: '#057a55',
-    abbr: 'B5',
-    desc: 'The leading platform for clubs focused on commercial revenue, sponsorship &amp; fan monetisation.',
-    url: 'reviews/review-back5.html',
-    score: '8.6',
-    cta: 'Get Demo'
-  },
-  'Spond': {
-    color: '#7c3aed',
-    abbr: 'SP',
-    desc: 'Free, easy-to-use grassroots club management with great availability and event tools.',
-    url: 'reviews/review-spond.html',
-    score: '6.8',
-    cta: 'Read Review'
-  },
-  'TeamSnap': {
-    color: '#0284c7',
-    abbr: 'TS',
-    desc: 'Mature, reliable scheduling &amp; club management — particularly strong in North America.',
-    url: 'reviews/review-teamsnap.html',
-    score: '7.4',
-    cta: 'Read Review'
-  },
-  'Pitchero': {
-    color: '#dc2626',
-    abbr: 'PT',
-    desc: 'UK-focused club website + management platform with FA integration and basic commercial tools.',
-    url: 'reviews/review-pitchero.html',
-    score: '7.2',
-    cta: 'Read Review'
-  },
-  'Playertek': {
-    color: '#d97706',
-    abbr: 'PK',
-    desc: 'Elite GPS tracking hardware for clubs where raw load data quality is non-negotiable.',
-    url: 'reviews/review-playertek.html',
-    score: '6.4',
-    cta: 'Read Review'
-  }
-};
-
 function showResults() {
-  const platforms = Object.keys(platformData);
-  const ranked = platforms.sort((a, b) => getScore(b) - getScore(a)).slice(0, 4);
+  // Build a personalised reason based on answers
+  const size = answers.q1;
+  const priority = answers.q2;
+  const perf = answers.q4;
+  const market = answers.q5;
 
-  const cards = document.getElementById('resultCards');
-  cards.innerHTML = ranked.slice(0, 2).map((name, i) => {
-    const p = platformData[name];
-    return `
-      <div class="result-card ${i === 0 ? 'top-pick' : ''}">
-        <div class="rank">${i === 0 ? '🏆 Best Match' : '🥈 Runner Up'}</div>
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
-          <div class="platform-logo-placeholder" style="background:${p.color};width:36px;height:36px;font-size:.75rem;">${p.abbr}</div>
-          <h3 style="margin:0;">${name}</h3>
-          <span class="score-pill high" style="margin-left:auto;font-size:.7rem;">${p.score}</span>
-        </div>
-        <p>${p.desc}</p>
-        <a href="${p.url}" class="btn ${i === 0 ? 'btn-primary' : 'btn-outline'} btn-sm" style="width:100%;justify-content:center;">${p.cta} →</a>
-      </div>
-    `;
-  }).join('');
+  const sizeLabel = { tiny: 'small', small: 'medium-sized', medium: 'large', pro: 'professional' }[size] || '';
+  let reason = `For your ${sizeLabel} club, 360Player is the strongest fit. `;
 
-  // Also show honourable mentions
-  if (ranked.length > 2) {
-    cards.innerHTML += `<div style="grid-column:1/-1;font-size:.875rem;color:var(--text-muted);padding:4px 0;"><strong>Also worth considering:</strong> ` +
-      ranked.slice(2).map(n => `<a href="${platformData[n].url}">${n}</a>`).join(', ') + `</div>`;
+  if (['performance','both','all'].includes(priority)) {
+    reason += 'It pairs best-in-class player development tracking with full club management — no other platform integrates both at this depth. ';
+  } else {
+    reason += 'It handles everything from scheduling and registrations to member communications in one clean platform. ';
   }
 
-  nextStep('results');
+  if (perf === 'critical') {
+    reason += 'With coaching data as a priority, you\'ll get the most from 360Player\'s development profiles, video tools, and load tracking.';
+  } else if (perf === 'useful') {
+    reason += 'The built-in performance tools mean you get player development data without managing a second system.';
+  } else {
+    reason += 'The platform scales with your club, so when you\'re ready to add performance tools they\'re already built in.';
+  }
+
+  if (market === 'aunz') {
+    reason += ' 360Player has strong adoption across Australian and New Zealand clubs.';
+  }
+
+  document.getElementById('result-reason').textContent = reason;
+
+  document.querySelector('.quiz-step.active').classList.remove('active');
   document.getElementById('step-results').classList.add('active');
   document.querySelector('.quiz-progress').style.display = 'none';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+async function submitLead(e) {
+  e.preventDefault();
+
+  const name    = document.getElementById('lead-name').value.trim();
+  const club    = document.getElementById('lead-club').value.trim();
+  const email   = document.getElementById('lead-email').value.trim();
+  const phone   = document.getElementById('lead-phone').value.trim();
+  const details = document.getElementById('lead-details').value.trim();
+
+  const btn = document.getElementById('leadSubmitBtn');
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  const quizSummary = `Size: ${answers.q1 || '—'} | Priority: ${answers.q2 || '—'} | Budget: ${answers.q3 || '—'} | Performance: ${answers.q4 || '—'} | Market: ${answers.q5 || '—'}`;
+  const taskNote = `New 360Player lead from ClubTechCompare\n\nName: ${name}\nClub: ${club}\nEmail: ${email}\nPhone: ${phone || 'not provided'}\nDetails: ${details || 'not provided'}\n\nQuiz answers: ${quizSummary}`;
+
+  try {
+    // 1. Send email via Formspree
+    await fetch(FORMSPREE_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name, club, email, phone, details,
+        quiz: quizSummary,
+        _subject: `New 360Player Lead — ${name} (${club})`
+      })
+    });
+
+    // 2. Create Asana task
+    await fetch('https://app.asana.com/api/1.0/tasks', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${ASANA_PAT}`,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        data: {
+          name: `360Player Lead — ${name} (${club})`,
+          notes: taskNote,
+          projects: [ASANA_PROJECT],
+          due_on: new Date(Date.now() + 86400000).toISOString().split('T')[0] // due tomorrow
+        }
+      })
+    });
+
+  } catch (err) {
+    console.error('Lead submission error:', err);
+  }
+
+  // Show success regardless (don't block user on API errors)
+  document.getElementById('confirmSection').style.display = 'none';
+  document.getElementById('successSection').style.display = 'block';
 }
 
 function restartQuiz() {
@@ -469,30 +482,11 @@ function restartQuiz() {
   document.querySelectorAll('.quiz-nav button[id^="next"]').forEach(b => b.disabled = true);
   document.querySelector('.quiz-progress').style.display = 'flex';
   document.getElementById('step-1').classList.add('active');
+  document.getElementById('confirmSection').style.display = 'block';
+  document.getElementById('successSection').style.display = 'none';
   updateProgress(1);
 }
-
-// Fix the nextStep for results
-const origNextStep = nextStep;
-function nextStep(n) {
-  if (n === 'results') {
-    document.querySelector('.quiz-step.active').classList.remove('active');
-    document.getElementById('step-results').classList.add('active');
-    return;
-  }
-  origNextStep(n);
-}
-
-// Lead form
-document.getElementById('quizLeadForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const btn = this.querySelector('button[type="submit"]');
-  btn.textContent = '✓ Sent! Check your inbox.';
-  btn.disabled = true;
-  btn.style.opacity = '0.7';
-});
 </script>
 
-<script src="js/main.js"></script>
 </body>
 </html>
