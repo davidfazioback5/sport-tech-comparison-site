@@ -51,12 +51,40 @@
   <p>These Terms are governed by the laws of Victoria, Australia. Any disputes shall be subject to the exclusive jurisdiction of the courts of Victoria.</p>
 
   <h2 style="margin-top:32px;">Contact</h2>
-  <p>Questions about these Terms? Email us at <a href="mailto:dave@back5.com.au">dave@back5.com.au</a>.</p>
+  <p>Questions about these Terms? Use the contact form below.<div style="margin-top:16px;">
+  <p>Use the form below to get in touch:</p>
+  <form id="contactForm" onsubmit="handleContact(event)" style="display:flex;flex-direction:column;gap:12px;max-width:480px;">
+    <input type="text" name="name" placeholder="Your name" required style="padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;font-size:.95rem;">
+    <input type="email" name="email" placeholder="Your email" required style="padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;font-size:.95rem;">
+    <textarea name="message" placeholder="Your message" rows="4" required style="padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;font-size:.95rem;resize:vertical;"></textarea>
+    <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Send Message →</button>
+    <p id="contactMsg" style="display:none;color:#166534;font-weight:600;">✓ Message sent! We'll be in touch shortly.</p>
+  </form>
+</div>
+<script>
+async function handleContact(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button');
+  btn.textContent = 'Sending...'; btn.disabled = true;
+  const data = Object.fromEntries(new FormData(form));
+  data._subject = 'Website Contact Form';
+  data._replyto = data.email;
+  try {
+    await fetch('https://formspree.io/f/xojoegvv', {
+      method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify(data)
+    });
+  } catch(err) { console.error(err); }
+  document.getElementById('contactMsg').style.display = 'block';
+  btn.style.display = 'none';
+}
+</script></p>
 </div>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-bottom">
-      <span>© 2026 ClubTech Compare. All rights reserved.</span>
+      <span>© 2026 Elevate Sports 360. All rights reserved.</span>
       <div style="display:flex;gap:16px;"><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a></div>
     </div>
   </div>

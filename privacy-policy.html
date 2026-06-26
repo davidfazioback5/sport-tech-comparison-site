@@ -27,7 +27,7 @@
 </div>
 <div class="container" style="padding:48px 0;max-width:760px;">
   <h2>Who We Are</h2>
-  <p>ClubTech Compare is an independent sports technology review and comparison resource operated by Back5 Pty Ltd (ABN available on request), based in Australia. Our website is <strong>clubtechcompare.com.au</strong>. You can contact us at <a href="mailto:dave@back5.com.au">dave@back5.com.au</a>.</p>
+  <p>ClubTech Compare is an independent sports technology review and comparison resource operated by Back5 Pty Ltd (ABN available on request), based in Australia. Our website is <strong>clubtechcompare.com.au</strong>. You can contact us using the form at the bottom of this page.</p>
 
   <h2 style="margin-top:32px;">What Information We Collect</h2>
   <p>We collect personal information only when you voluntarily provide it — for example, when you:</p>
@@ -51,18 +51,46 @@
   <p>Our website may use cookies and analytics tools (such as Google Analytics) to understand how visitors use the site. This data is aggregated and anonymous. You can disable cookies in your browser settings at any time.</p>
 
   <h2 style="margin-top:32px;">Data Retention</h2>
-  <p>We retain your contact information for as long as necessary to fulfil the purpose for which it was collected, or as required by law. You may request deletion of your data at any time by emailing <a href="mailto:dave@back5.com.au">dave@back5.com.au</a>.</p>
+  <p>We retain your contact information for as long as necessary to fulfil the purpose for which it was collected, or as required by law. You may request deletion of your data at any time using the contact form at the bottom of this page.</p>
 
   <h2 style="margin-top:32px;">Your Rights</h2>
-  <p>Under the Australian Privacy Act 1988 (and applicable state/territory laws), you have the right to access, correct, or request deletion of personal information we hold about you. To exercise any of these rights, contact us at <a href="mailto:dave@back5.com.au">dave@back5.com.au</a>.</p>
+  <p>Under the Australian Privacy Act 1988 (and applicable state/territory laws), you have the right to access, correct, or request deletion of personal information we hold about you. To exercise any of these rights, use the contact form at the bottom of this page.</p>
 
   <h2 style="margin-top:32px;">Contact</h2>
-  <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:dave@back5.com.au">dave@back5.com.au</a>.</p>
+  <p>If you have any questions about this Privacy Policy, please use the contact form below.<div style="margin-top:16px;">
+  <p>Use the form below to get in touch:</p>
+  <form id="contactForm" onsubmit="handleContact(event)" style="display:flex;flex-direction:column;gap:12px;max-width:480px;">
+    <input type="text" name="name" placeholder="Your name" required style="padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;font-size:.95rem;">
+    <input type="email" name="email" placeholder="Your email" required style="padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;font-size:.95rem;">
+    <textarea name="message" placeholder="Your message" rows="4" required style="padding:10px 14px;border:1px solid #e2e8f0;border-radius:8px;font-size:.95rem;resize:vertical;"></textarea>
+    <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Send Message →</button>
+    <p id="contactMsg" style="display:none;color:#166534;font-weight:600;">✓ Message sent! We'll be in touch shortly.</p>
+  </form>
+</div>
+<script>
+async function handleContact(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('button');
+  btn.textContent = 'Sending...'; btn.disabled = true;
+  const data = Object.fromEntries(new FormData(form));
+  data._subject = 'Website Contact Form';
+  data._replyto = data.email;
+  try {
+    await fetch('https://formspree.io/f/xojoegvv', {
+      method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify(data)
+    });
+  } catch(err) { console.error(err); }
+  document.getElementById('contactMsg').style.display = 'block';
+  btn.style.display = 'none';
+}
+</script></p>
 </div>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-bottom">
-      <span>© 2026 ClubTech Compare. All rights reserved.</span>
+      <span>© 2026 Elevate Sports 360. All rights reserved.</span>
       <div style="display:flex;gap:16px;"><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="affiliate-disclosure.html">Affiliate Disclosure</a></div>
     </div>
   </div>
