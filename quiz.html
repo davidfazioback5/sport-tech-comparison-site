@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find My Platform — Sports Club Tech Finder Quiz | ClubTech Compare</title>
+  <meta name="description" content="Answer 5 quick questions and get a personalised shortlist of sports club management platforms matched to your needs.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">ClubTech<span>Compare</span></a>
+    <ul class="nav-links">
+      <li><a href="club-management-software.html">Club Management</a></li>
+      <li><a href="player-performance-tracking.html">Performance Tracking</a></li>
+      <li><a href="club-monetisation-platforms.html">Monetisation</a></li>
+      <li><a href="monetisation-services.html">Our Services</a></li>
+      <li><a href="quiz.html" class="active">Find My Platform →</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="page-hero" style="padding:48px 0;">
+  <div class="container" style="text-align:center;">
+    <div class="eyebrow" style="color:#93c5fd;text-align:center;">Buyer's Guide</div>
+    <h1>Find Your Perfect Platform</h1>
+    <p style="max-width:520px;margin:12px auto 0;">5 questions. 2 minutes. A personalised shortlist matched to your club's size, priorities, and budget.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="quiz-container">
+
+      <!-- Progress bar -->
+      <div class="quiz-progress" id="progressBar">
+        <div class="quiz-progress-dot" id="dot-1"></div>
+        <div class="quiz-progress-dot" id="dot-2"></div>
+        <div class="quiz-progress-dot" id="dot-3"></div>
+        <div class="quiz-progress-dot" id="dot-4"></div>
+        <div class="quiz-progress-dot" id="dot-5"></div>
+      </div>
+
+      <!-- Step 1: Club Size -->
+      <div class="quiz-step active" id="step-1">
+        <div class="eyebrow">Question 1 of 5</div>
+        <div class="quiz-question">How big is your club?</div>
+        <div class="quiz-options">
+          <div class="quiz-option" data-value="tiny" onclick="selectOption(this, 1)">
+            <span class="quiz-option-icon">🌱</span>
+            <div class="quiz-option-text">
+              <strong>Small — Under 100 members</strong>
+              <span>Grassroots, recreational, or junior club</span>
+            </div>
+          </div>
+          <div class="quiz-option" data-value="small" onclick="selectOption(this, 1)">
+            <span class="quiz-option-icon">🏃</span>
+            <div class="quiz-option-text">
+              <strong>Medium — 100–500 members</strong>
+              <span>Community club with multiple teams</span>
+            </div>
+          </div>
+          <div class="quiz-option" data-value="medium" onclick="selectOption(this, 1)">
+            <span class="quiz-option-icon">🏟️</span>
+            <div class="quiz-option-text">
+              <strong>Large — 500–2,000 members</strong>
+              <span>Semi-professional or established community club</span>
+            </div>
+          </div>
+          <div class="quiz-option" data-value="pro" onclick="selectOption(this, 1)">
+            <span class="quiz-option-icon">⭐</span>
+            <div class="quiz-option-text">
+              <strong>Professional / Academy</strong>
+              <span>Full-time staff, performance focus, or elite youth</span>
+            </div>
+          </div>
+        </div>
+        <div class="quiz-nav">
+          <div></div>
+          <button class="btn btn-primary" onclick="nextStep(2)" disabled id="next-1">Next →</button>
+        </div>
+      </div>
+
+      <!-- Step 2: Priority -->
+      <div class="quiz-step" id="step-2">
+        <div class="eyebrow">Question 2 of 5</div>
+        <div class="quiz-question">What's your club's biggest priority right now?</div>
+        <div class="quiz-options">
+          <div class="quiz-option" data-value="management" onclick="selectOption(this, 2)">
+            <span class="quiz-option-icon">📋</span>
+            <div class="quiz-option-text">
+              <strong>Club admin &amp; management</strong>
+              <span>Scheduling, availability, member comms, registrations</span>
+            </div>
+          </div>
+          <div class="quiz-option" data-value="performance" onclick="selectOption(this, 2)">
+            <span class="quiz-option-icon">📊</span>
+            <div class="quiz-option-text">
+              <strong>Player performance &amp; coaching data</strong>
+              <span>Training loads, development plans, video analysis</span>
+            </div>
+          </div>
+          <div class="quiz-option" data-value="revenue" onclick="selectOption(this, 2)">
+            <span class="quiz-option-icon">💰</span>
+            <div class="quiz-option-text">
+              <strong>Fan engagement &amp; commercial revenue</strong>
+              <span>Sponsorship, fan loyalty, digital advertising income</span>
+            </div>
+          </div>
+          <div class="quiz-option" data-value="all" onclick="selectOption(this, 2)">
+            <span class="quiz-option-icon">🎯</span>
+            <div class="quiz-option-text">
+              <strong>All of the above — we need it all</strong>
+              <span>A complete platform covering management, performance &amp; revenue</span>
+            </div>
+          </div>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn btn-outline" onclick="prevStep(1)">← Back</button>
+          <button class="btn btn-primary" onclick="nextStep(3)" disabled id="next-2">Next →</button>
+        </div>
+      </div>
+
+      <!-- Step 3: Budget -->
+      <div class="quiz-step" id="step-3">
+        <div class="eyebrow">Question 3 of 5</div>
+        <div class="quiz-question">What's your approximate monthly budget for software?</div>
+        <div class="quiz-options">
+          <div class="quiz-option" data-value="free" onclick="selectOption(this, 3)">
+            <span class="quiz-option-icon">🆓</span>
+            <div class="quiz-option-text">
+              <strong>Free — we need no-cost tools only</strong>
+              <span>Budget is very tight or this is a volunteer-run club</span>
+            </div>
+          </div>
+          <div class="quiz-option" data-value="low" onclick="selectOption(this, 3)">
+            <span class="quiz-option-icon">💵</span>
+            <div class="quiz-option-text">
+              <strong>Low — up to €50/month</strong>
+              <span>Happy to pay for the right tool at a reasonable price</span>
+            </div>
+          </div>
+          <div class="quiz-option" data-value="mid" onclick="selectOption(this, 3)">
+            <span class="quiz-option-icon">💳</span>
+            <div class="quiz-option-text">
+              <strong>Mid — €50–200/month</strong>
+              <span>Prepared to invest if the platform delivers clear value</span>
+            </div>
+          </div>
+          <div class="quiz-option" data-value="high" onclick="selectOption(this, 3)">
+            <span class="quiz-option-icon">🏦</span>
+            <div class="quiz-option-text">
+              <strong>Flexible — ROI is more important than price</strong>
+              <span>We'll pay for a platform that genuinely moves the needle</span>
+            </div>
+          </div>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn btn-outline" onclick="prevStep(2)">← Back</button>
+          <button class="btn btn-primary" onclick="nextStep(4)" disabled id="next-3">Next →</button>
+        </div>
+      </div>
+
+      <!-- Step 4: GPS / Hardware -->
+      <div class="quiz-step" id="step-4">
+        <div class="eyebrow">Question 4 of 5</div>
+        <div class="quiz-question">Do you need GPS tracking hardware for players?</div>
+        <div class="quiz-options">
+          <div class="quiz-option" data-value="yes_gps" onclick="selectOption(this, 4)">
+            <span class="quiz-option-icon">📡</span>
+            <div class="quiz-option-text">
+              <strong>Yes — physical GPS tracking is essential</strong>
+              <span>We need real wearable load data during training and matches</span>
+            </div>
+          </div>
+          <div class="quiz-option" data-value="software_only" onclick="selectOption(this, 4)">
+            <span class="quiz-option-icon">💻</span>
+            <div class="quiz-option-text">
+              <strong>No — software-based tracking is fine</strong>
+              <span>App-based self-reporting and coach data entry works for us</span>
+            </div>
+          </div>
+          <div class="quiz-option" data-value="not_needed" onclick="selectOption(this, 4)">
+            <span class="quiz-option-icon">❌</span>
+            <div class="quiz-option-text">
+              <strong>We don't need performance tracking at all</strong>
+              <span>Management and/or commercial tools are our focus</span>
+            </div>
+          </div>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn btn-outline" onclick="prevStep(3)">← Back</button>
+          <button class="btn btn-primary" onclick="nextStep(5)" disabled id="next-4">Next →</button>
+        </div>
+      </div>
+
+      <!-- Step 5: Market -->
+      <div class="quiz-step" id="step-5">
+        <div class="eyebrow">Question 5 of 5</div>
+        <div class="quiz-question">Where is your club based?</div>
+        <div class="quiz-options">
+          <div class="quiz-option" data-value="uk" onclick="selectOption(this, 5)">
+            <span class="quiz-option-icon">🇬🇧</span>
+            <div class="quiz-option-text">
+              <strong>UK</strong>
+              <span>England, Scotland, Wales, Northern Ireland</span>
+            </div>
+          </div>
+          <div class="quiz-option" data-value="europe" onclick="selectOption(this, 5)">
+            <span class="quiz-option-icon">🇪🇺</span>
+            <div class="quiz-option-text">
+              <strong>Europe (outside UK)</strong>
+              <span>EU, Scandinavia, and other European markets</span>
+            </div>
+          </div>
+          <div class="quiz-option" data-value="northamerica" onclick="selectOption(this, 5)">
+            <span class="quiz-option-icon">🇺🇸</span>
+            <div class="quiz-option-text">
+              <strong>North America</strong>
+              <span>USA or Canada</span>
+            </div>
+          </div>
+          <div class="quiz-option" data-value="other" onclick="selectOption(this, 5)">
+            <span class="quiz-option-icon">🌍</span>
+            <div class="quiz-option-text">
+              <strong>Rest of World</strong>
+              <span>Australia, Middle East, Africa, Asia-Pacific, etc.</span>
+            </div>
+          </div>
+        </div>
+        <div class="quiz-nav">
+          <button class="btn btn-outline" onclick="prevStep(4)">← Back</button>
+          <button class="btn btn-green btn-lg" onclick="showResults()" disabled id="next-5">See My Results →</button>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div class="quiz-step" id="step-results">
+        <div class="quiz-result">
+          <div class="eyebrow" style="text-align:center;">Your Results</div>
+          <h2>Here's your personalised shortlist</h2>
+          <p>Based on your answers, these are the platforms most likely to fit your club.</p>
+
+          <div class="result-cards" id="resultCards">
+            <!-- Populated by JS -->
+          </div>
+
+          <div style="background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;text-align:left;">
+            <h4 style="margin-bottom:8px;">Want a human second opinion?</h4>
+            <p style="font-size:.875rem;color:var(--text-muted);margin-bottom:16px;">Tell us a bit more and we'll send you a personalised recommendation — plus any pricing benchmarks relevant to your club size.</p>
+            <form id="quizLeadForm" style="display:flex;flex-direction:column;gap:12px;">
+              <div class="form-row">
+                <div class="form-group" style="margin-bottom:0;"><label>Name</label><input type="text" placeholder="Your name" required></div>
+                <div class="form-group" style="margin-bottom:0;"><label>Email</label><input type="email" placeholder="your@email.com" required></div>
+              </div>
+              <div class="form-group" style="margin-bottom:0;"><label>Club Name</label><input type="text" placeholder="City FC" required></div>
+              <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Send Me My Recommendation →</button>
+            </form>
+          </div>
+
+          <button class="btn btn-outline" style="margin-top:16px;width:100%;justify-content:center;" onclick="restartQuiz()">← Start Again</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">ClubTech<span>Compare</span></a>
+        <p>Independent comparison and review resource for sports club technology.</p>
+        <div class="disclosure-notice"><strong>Partner Disclosure:</strong> ClubTech Compare earns referral fees from some platforms. This does not affect our editorial scoring. <a href="#" style="color:#64748b;text-decoration:underline;">Full disclosure policy</a>.</div>
+      </div>
+      <div class="footer-col"><h5>Categories</h5><ul>
+        <li><a href="club-management-software.html">Club Management</a></li>
+        <li><a href="player-performance-tracking.html">Performance Tracking</a></li>
+        <li><a href="club-monetisation-platforms.html">Monetisation Tools</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Reviews</h5><ul>
+        <li><a href="reviews/review-360player.html">360Player</a></li>
+        <li><a href="reviews/review-back5.html">Back5</a></li>
+        <li><a href="reviews/review-spond.html">Spond</a></li>
+        <li><a href="reviews/review-teamsnap.html">TeamSnap</a></li>
+        <li><a href="reviews/review-pitchero.html">Pitchero</a></li>
+        <li><a href="reviews/review-playertek.html">Playertek</a></li>
+      </ul></div>
+      <div class="footer-col"><h5>Resources</h5><ul>
+        <li><a href="quiz.html">Platform Finder Quiz</a></li>
+        <li><a href="monetisation-services.html">Our Services</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ClubTech Compare. All rights reserved.</span>
+      <div style="display:flex;gap:16px;"><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Affiliate Disclosure</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Quiz state
+const answers = {};
+
+function selectOption(el, step) {
+  el.closest('.quiz-options').querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
+  el.classList.add('selected');
+  answers['q' + step] = el.dataset.value;
+  const nextBtn = document.getElementById('next-' + step);
+  if (nextBtn) nextBtn.disabled = false;
+}
+
+function nextStep(n) {
+  document.querySelector('.quiz-step.active').classList.remove('active');
+  document.getElementById('step-' + n).classList.add('active');
+  updateProgress(n);
+}
+
+function prevStep(n) {
+  document.querySelector('.quiz-step.active').classList.remove('active');
+  document.getElementById('step-' + n).classList.add('active');
+  updateProgress(n);
+}
+
+function updateProgress(current) {
+  for (let i = 1; i <= 5; i++) {
+    const dot = document.getElementById('dot-' + i);
+    dot.classList.toggle('done', i < current);
+  }
+}
+
+function getScore(platform) {
+  const { q1: size, q2: priority, q3: budget, q4: gps, q5: market } = answers;
+  let score = 0;
+
+  if (platform === '360Player') {
+    if (['medium','pro'].includes(size)) score += 3;
+    if (['performance','all'].includes(priority)) score += 4;
+    if (['mid','high'].includes(budget)) score += 2;
+    if (['software_only','yes_gps'].includes(gps)) score += 2;
+    if (['europe','uk','other'].includes(market)) score += 1;
+  }
+  if (platform === 'Back5') {
+    if (['small','medium','pro'].includes(size)) score += 2;
+    if (['revenue','all'].includes(priority)) score += 5;
+    if (['mid','high'].includes(budget)) score += 2;
+    if (['not_needed','software_only'].includes(gps)) score += 1;
+  }
+  if (platform === 'Spond') {
+    if (['tiny','small'].includes(size)) score += 4;
+    if (['management'].includes(priority)) score += 3;
+    if (['free','low'].includes(budget)) score += 4;
+    if (['not_needed'].includes(gps)) score += 2;
+  }
+  if (platform === 'TeamSnap') {
+    if (['small','medium'].includes(size)) score += 3;
+    if (['management','all'].includes(priority)) score += 2;
+    if (['low','mid'].includes(budget)) score += 2;
+    if (['northamerica'].includes(market)) score += 3;
+  }
+  if (platform === 'Pitchero') {
+    if (['tiny','small','medium'].includes(size)) score += 2;
+    if (['management','revenue'].includes(priority)) score += 2;
+    if (['low','mid'].includes(budget)) score += 2;
+    if (['uk'].includes(market)) score += 4;
+  }
+  if (platform === 'Playertek') {
+    if (['yes_gps'].includes(gps)) score += 6;
+    if (['performance'].includes(priority)) score += 3;
+    if (['high'].includes(budget)) score += 2;
+    if (['pro'].includes(size)) score += 2;
+  }
+  return score;
+}
+
+const platformData = {
+  '360Player': {
+    color: '#1a56db',
+    abbr: '360',
+    desc: 'Best-in-class performance tracking &amp; club management for academies and semi-pro clubs.',
+    url: 'reviews/review-360player.html',
+    score: '9.1',
+    cta: 'Get Demo'
+  },
+  'Back5': {
+    color: '#057a55',
+    abbr: 'B5',
+    desc: 'The leading platform for clubs focused on commercial revenue, sponsorship &amp; fan monetisation.',
+    url: 'reviews/review-back5.html',
+    score: '8.6',
+    cta: 'Get Demo'
+  },
+  'Spond': {
+    color: '#7c3aed',
+    abbr: 'SP',
+    desc: 'Free, easy-to-use grassroots club management with great availability and event tools.',
+    url: 'reviews/review-spond.html',
+    score: '6.8',
+    cta: 'Read Review'
+  },
+  'TeamSnap': {
+    color: '#0284c7',
+    abbr: 'TS',
+    desc: 'Mature, reliable scheduling &amp; club management — particularly strong in North America.',
+    url: 'reviews/review-teamsnap.html',
+    score: '7.4',
+    cta: 'Read Review'
+  },
+  'Pitchero': {
+    color: '#dc2626',
+    abbr: 'PT',
+    desc: 'UK-focused club website + management platform with FA integration and basic commercial tools.',
+    url: 'reviews/review-pitchero.html',
+    score: '7.2',
+    cta: 'Read Review'
+  },
+  'Playertek': {
+    color: '#d97706',
+    abbr: 'PK',
+    desc: 'Elite GPS tracking hardware for clubs where raw load data quality is non-negotiable.',
+    url: 'reviews/review-playertek.html',
+    score: '6.4',
+    cta: 'Read Review'
+  }
+};
+
+function showResults() {
+  const platforms = Object.keys(platformData);
+  const ranked = platforms.sort((a, b) => getScore(b) - getScore(a)).slice(0, 4);
+
+  const cards = document.getElementById('resultCards');
+  cards.innerHTML = ranked.slice(0, 2).map((name, i) => {
+    const p = platformData[name];
+    return `
+      <div class="result-card ${i === 0 ? 'top-pick' : ''}">
+        <div class="rank">${i === 0 ? '🏆 Best Match' : '🥈 Runner Up'}</div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <div class="platform-logo-placeholder" style="background:${p.color};width:36px;height:36px;font-size:.75rem;">${p.abbr}</div>
+          <h3 style="margin:0;">${name}</h3>
+          <span class="score-pill high" style="margin-left:auto;font-size:.7rem;">${p.score}</span>
+        </div>
+        <p>${p.desc}</p>
+        <a href="${p.url}" class="btn ${i === 0 ? 'btn-primary' : 'btn-outline'} btn-sm" style="width:100%;justify-content:center;">${p.cta} →</a>
+      </div>
+    `;
+  }).join('');
+
+  // Also show honourable mentions
+  if (ranked.length > 2) {
+    cards.innerHTML += `<div style="grid-column:1/-1;font-size:.875rem;color:var(--text-muted);padding:4px 0;"><strong>Also worth considering:</strong> ` +
+      ranked.slice(2).map(n => `<a href="${platformData[n].url}">${n}</a>`).join(', ') + `</div>`;
+  }
+
+  nextStep('results');
+  document.getElementById('step-results').classList.add('active');
+  document.querySelector('.quiz-progress').style.display = 'none';
+}
+
+function restartQuiz() {
+  Object.keys(answers).forEach(k => delete answers[k]);
+  document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
+  document.querySelectorAll('.quiz-nav button[id^="next"]').forEach(b => b.disabled = true);
+  document.querySelector('.quiz-progress').style.display = 'flex';
+  document.getElementById('step-1').classList.add('active');
+  updateProgress(1);
+}
+
+// Fix the nextStep for results
+const origNextStep = nextStep;
+function nextStep(n) {
+  if (n === 'results') {
+    document.querySelector('.quiz-step.active').classList.remove('active');
+    document.getElementById('step-results').classList.add('active');
+    return;
+  }
+  origNextStep(n);
+}
+
+// Lead form
+document.getElementById('quizLeadForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  btn.textContent = '✓ Sent! Check your inbox.';
+  btn.disabled = true;
+  btn.style.opacity = '0.7';
+});
+</script>
+
+<script src="js/main.js"></script>
+</body>
+</html>
