@@ -1,0 +1,36 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e3a5f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="6" height="630" fill="#3b82f6"/>
+  <!-- Badge -->
+  <rect x="60" y="60" width="220" height="36" rx="18" fill="#3b82f6" opacity="0.9"/>
+  <text x="170" y="83" font-family="Arial,sans-serif" font-size="14" font-weight="700" fill="white" text-anchor="middle" letter-spacing="1">AUSTRALIA 2026</text>
+  <!-- Main heading -->
+  <text x="60" y="180" font-family="Arial,sans-serif" font-size="56" font-weight="800" fill="white">Find the Right</text>
+  <text x="60" y="250" font-family="Arial,sans-serif" font-size="56" font-weight="800" fill="white">Software for Your</text>
+  <text x="60" y="320" font-family="Arial,sans-serif" font-size="56" font-weight="800" fill="#3b82f6">Sports Club</text>
+  <!-- Sub -->
+  <text x="60" y="390" font-family="Arial,sans-serif" font-size="24" fill="#94a3b8">Independent reviews, scores &amp; comparisons.</text>
+  <text x="60" y="425" font-family="Arial,sans-serif" font-size="24" fill="#94a3b8">6 platforms · 40+ features · 100% independent</text>
+  <!-- Stats bar -->
+  <rect x="60" y="490" width="1080" height="90" rx="12" fill="rgba(255,255,255,0.07)"/>
+  <text x="210" y="530" font-family="Arial,sans-serif" font-size="32" font-weight="800" fill="white" text-anchor="middle">6</text>
+  <text x="210" y="558" font-family="Arial,sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Platforms</text>
+  <line x1="370" y1="510" x2="370" y2="570" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="480" y="530" font-family="Arial,sans-serif" font-size="32" font-weight="800" fill="white" text-anchor="middle">40+</text>
+  <text x="480" y="558" font-family="Arial,sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Features</text>
+  <line x1="620" y1="510" x2="620" y2="570" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="760" y="530" font-family="Arial,sans-serif" font-size="32" font-weight="800" fill="#3b82f6" text-anchor="middle">Free</text>
+  <text x="760" y="558" font-family="Arial,sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">2-min Quiz</text>
+  <line x1="900" y1="510" x2="900" y2="570" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="1010" y="530" font-family="Arial,sans-serif" font-size="32" font-weight="800" fill="white" text-anchor="middle">100%</text>
+  <text x="1010" y="558" font-family="Arial,sans-serif" font-size="14" fill="#94a3b8" text-anchor="middle">Independent</text>
+  <!-- Branding -->
+  <text x="1140" y="40" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="white" text-anchor="end">ClubTech<tspan fill="#3b82f6">Compare</tspan></text>
+  <text x="1140" y="62" font-family="Arial,sans-serif" font-size="13" fill="#64748b" text-anchor="end">clubtechcompare.com.au</text>
+</svg>
