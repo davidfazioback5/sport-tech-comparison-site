@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find the Best Sports Club Software for Your Club — Free Quiz | ClubTech Compare</title>
-  <meta name="description" content="Answer 5 quick questions and get a personalised shortlist of sports club management platforms matched to your club's size, sport, and budget.">
+  <meta name="description" content="Answer 4 quick questions and get a personalised shortlist of sports club management platforms matched to your club's size, sport, and budget.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://clubtechcompare.com.au/quiz.html">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Find the Best Sports Club Software for Your Club — Free Quiz | ClubTech Compare">
-  <meta property="og:description" content="Answer 5 quick questions and get a personalised shortlist of sports club management platforms matched to your club's size, sport, and budget.">
+  <meta property="og:description" content="Answer 4 quick questions and get a personalised shortlist of sports club management platforms matched to your club's size, sport, and budget.">
   <meta property="og:url" content="https://clubtechcompare.com.au/quiz.html">
   <meta property="og:image" content="https://clubtechcompare.com.au/og-image.jpg">
   <meta property="og:site_name" content="ClubTech Compare">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Find the Best Sports Club Software for Your Club — Free Quiz | ClubTech Compare">
-  <meta name="twitter:description" content="Answer 5 quick questions and get a personalised shortlist of sports club management platforms matched to your club's size, sport, and budget.">
+  <meta name="twitter:description" content="Answer 4 quick questions and get a personalised shortlist of sports club management platforms matched to your club's size, sport, and budget.">
   <meta name="twitter:image" content="https://clubtechcompare.com.au/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -57,7 +57,7 @@ src="https://www.facebook.com/tr?id=3297282677121569&ev=PageView&noscript=1"
       "@id": "https://clubtechcompare.com.au/quiz.html",
       "url": "https://clubtechcompare.com.au/quiz.html",
       "name": "Find My Sports Club Platform \u2014 Free Quiz",
-      "description": "Answer 5 quick questions and get a personalised shortlist of sports club management platforms matched to your club.",
+      "description": "Answer 4 quick questions and get a personalised shortlist of sports club management platforms matched to your club.",
       "isPartOf": {
         "@id": "https://clubtechcompare.com.au/#website"
       }
@@ -239,40 +239,20 @@ src="https://www.facebook.com/tr?id=3297282677121569&ev=PageView&noscript=1"
         </div>
       </div>
 
-      <!-- Results: always 360Player -->
+      <!-- Results: 360Player + best-fit second platform (cards built by JS) -->
       <div class="quiz-step" id="step-results">
         <div class="quiz-result">
           <div class="eyebrow" style="text-align:center;color:#16a34a;">✓ Analysis Complete</div>
-          <h2 style="text-align:center;">Your #1 Recommended Platform</h2>
-          <p style="text-align:center;color:var(--text-muted);margin-bottom:24px;">Based on your club's profile, one platform stands out clearly.</p>
+          <h2 style="text-align:center;">Your Top 2 Recommended Platforms</h2>
+          <p style="text-align:center;color:var(--text-muted);margin-bottom:24px;">Based on your club's profile, these are the two platforms that fit best.</p>
 
-          <!-- 360Player result card -->
-          <div class="result-card top-pick" style="margin-bottom:24px;">
-            <div class="rank">🏆 Best Match for Your Club</div>
-            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
-              <div class="platform-logo-placeholder" style="background:#1a56db;width:48px;height:48px;font-size:.9rem;"><img src="https://logo.clearbit.com/360player.com" alt="360" onerror="this.style.display='none'"></div>
-              <div>
-                <h3 style="margin:0;font-size:1.3rem;">360Player</h3>
-                <div class="rating-line"><span class="stars">★★★★★</span> <span style="font-weight:700;">9.1/10 — Editor's Pick 2026</span></div>
-              </div>
-            </div>
-            <div id="result-reason" style="background:rgba(26,86,219,.07);border-left:3px solid #1a56db;padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:16px;font-size:.9rem;line-height:1.6;">
-              <!-- Populated by JS -->
-            </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;font-size:.85rem;">
-              <div style="display:flex;align-items:center;gap:6px;"><span style="color:#16a34a;font-weight:700;">✓</span> Club management &amp; admin</div>
-              <div style="display:flex;align-items:center;gap:6px;"><span style="color:#16a34a;font-weight:700;">✓</span> Player development profiles</div>
-              <div style="display:flex;align-items:center;gap:6px;"><span style="color:#16a34a;font-weight:700;">✓</span> Video analysis built-in</div>
-              <div style="display:flex;align-items:center;gap:6px;"><span style="color:#16a34a;font-weight:700;">✓</span> Scheduling &amp; communication</div>
-              <div style="display:flex;align-items:center;gap:6px;"><span style="color:#16a34a;font-weight:700;">✓</span> Coach &amp; player mobile app</div>
-              <div style="display:flex;align-items:center;gap:6px;"><span style="color:#16a34a;font-weight:700;">✓</span> White-label &amp; API access</div>
-            </div>
-          </div>
+          <!-- Result cards are inserted here by showResults() -->
+          <div id="resultCards"></div>
 
           <!-- Confirmation gate -->
           <div id="confirmSection" style="background:var(--bg-white);border:2px solid #1a56db;border-radius:var(--radius-lg);padding:28px;">
-            <h4 style="margin-bottom:6px;">Would you like 360Player to contact you?</h4>
-            <p style="font-size:.875rem;color:var(--text-muted);margin-bottom:20px;">Their team will reach out within 1 business day with a demo tailored to your club's profile — no hard sell, no obligation.</p>
+            <h4 style="margin-bottom:6px;">Would you like to be contacted about these platforms?</h4>
+            <p style="font-size:.875rem;color:var(--text-muted);margin-bottom:20px;">Leave your details and someone will be in touch with you shortly — no hard sell, no obligation.</p>
             <form id="leadForm" onsubmit="submitLead(event)" style="display:flex;flex-direction:column;gap:14px;">
               <div class="form-row">
                 <div class="form-group" style="margin-bottom:0;">
@@ -299,9 +279,10 @@ src="https://www.facebook.com/tr?id=3297282677121569&ev=PageView&noscript=1"
                 <input type="text" id="lead-details" placeholder="e.g. 300 members, Sydney, football">
               </div>
               <button type="submit" class="btn btn-primary" id="leadSubmitBtn" style="width:100%;justify-content:center;font-size:1rem;padding:14px;">
-                Yes — Connect Me with 360Player →
+                Yes — Have Someone Contact Me →
               </button>
-              <p style="font-size:.75rem;color:var(--text-muted);text-align:center;margin:0;">Your details are shared only with 360Player. No spam, unsubscribe any time.</p>
+              <p id="leadError" style="display:none;font-size:.8rem;color:#b91c1c;text-align:center;margin:0;">Sorry, something went wrong sending your details. Please try again.</p>
+              <p style="font-size:.75rem;color:var(--text-muted);text-align:center;margin:0;">By submitting, you agree to your details being passed to Back5, who will contact you about the platforms above. No spam.</p>
             </form>
           </div>
 
@@ -309,9 +290,7 @@ src="https://www.facebook.com/tr?id=3297282677121569&ev=PageView&noscript=1"
           <div id="successSection" style="display:none;text-align:center;padding:32px;background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #86efac;border-radius:var(--radius-lg);">
             <div style="font-size:2.5rem;margin-bottom:12px;">✅</div>
             <h3 style="color:#15803d;margin-bottom:8px;">You're all set!</h3>
-            <p style="color:#166534;margin-bottom:20px;">The 360Player team has been notified and will be in touch within 1 business day. A confirmation has been sent to your email.</p>
-            <a href="https://meetings-eu1.hubspot.com/david-fazio?uuid=d66b471f-ccc6-4745-b1cd-9a15890cc106" target="_blank" class="btn btn-primary" style="display:inline-flex;margin-bottom:12px;">📅 Book a Meeting Now →</a>
-            <p style="font-size:.8rem;color:#166534;margin:0;">Prefer email? Reach us at <a href="mailto:david.fazio@360player.com" style="color:#15803d;font-weight:600;">david.fazio@360player.com</a></p>
+            <p style="color:#166534;margin:0;">Thanks — your details have been received and someone will be in touch with you shortly.</p>
           </div>
 
           <button class="btn btn-outline" style="margin-top:16px;width:100%;justify-content:center;" onclick="restartQuiz()">← Start Again</button>
@@ -359,10 +338,93 @@ src="https://www.facebook.com/tr?id=3297282677121569&ev=PageView&noscript=1"
 
 <script>
 // ─── CONFIG ───────────────────────────────────────────────────────────────────
+// Leads are posted to Formspree. The address that RECEIVES the email is set in the
+// Formspree dashboard for this form (Settings > Email notifications), not here.
+// It should be dave@back5.com.au.
 const FORMSPREE_URL = 'https://formspree.io/f/xojoegvv';
 // ─────────────────────────────────────────────────────────────────────────────
 
 const answers = {};
+let shownPlatforms = [];
+
+// Platforms that can appear in the result. 360Player is always first.
+const PLATFORMS = {
+  '360player': {
+    name: '360Player', initials: '360', logo: 'https://logo.clearbit.com/360player.com',
+    badge: '🏆 Best Match for Your Club',
+    rating: '9.1/10 — Editor\'s Pick 2026',
+    review: 'reviews/review-360player.html',
+    features: ['Club management & admin', 'Player development profiles', 'Video analysis built-in',
+               'Scheduling & communication', 'Coach & player mobile app', 'White-label & API access']
+  },
+  'revolutionise': {
+    name: 'Revolutionise Sport', initials: 'REV', logo: 'https://logo.clearbit.com/revolutionise.com.au',
+    badge: '🥈 Also a Strong Fit',
+    review: 'reviews/review-revolutionise.html',
+    reason: 'Purpose-built for Australian and New Zealand clubs and associations, with local payment gateways, registrations and competition management.',
+    features: ['Registration & memberships', 'Competition management', 'Local AU/NZ payments & support']
+  },
+  'tidyhq': {
+    name: 'TidyHQ', initials: 'THQ', logo: 'https://logo.clearbit.com/tidyhq.com',
+    badge: '🥈 Also a Strong Fit',
+    review: 'reviews/review-tidyhq.html',
+    reason: 'An affordable, easy-to-use option for volunteer-run clubs that need memberships, events and basic finances in one place (from A$29/month).',
+    features: ['Memberships & online payments', 'Event management', 'Easy for volunteer committees']
+  },
+  'spond': {
+    name: 'Spond', initials: 'SP', logo: 'https://logo.clearbit.com/spond.com',
+    badge: '🥈 Also a Strong Fit',
+    review: 'reviews/review-spond.html',
+    reason: 'A free-to-start platform with excellent availability tracking, events and team communication for grassroots and community clubs.',
+    features: ['Free tier available', 'Availability & event management', 'Team messaging']
+  },
+  'xps': {
+    name: 'XPS Network', initials: 'XPS', logo: 'https://logo.clearbit.com/xpsnetwork.com',
+    badge: '🥈 Also a Strong Fit',
+    review: 'reviews/review-xps.html',
+    reason: 'A coaching-focused platform for session planning, training libraries and performance data, which suits clubs prioritising player development.',
+    features: ['Session planning', 'Training library', 'Performance & coaching data']
+  }
+};
+
+function pickSecondPlatform(a) {
+  const feats = (a.q2 || '').split(', ');
+  const wantsPerf = feats.some(f => ['performance', 'video', 'training-library', 'session'].includes(f));
+  const wantsAdmin = feats.some(f => ['management', 'payments', 'crm', 'attendance', 'fixtures'].includes(f));
+  const anz = ['australia', 'newzealand'].includes(a.q4);
+
+  if (wantsPerf && !wantsAdmin) return 'xps';
+  if (a.q3 === 'low' || a.q1 === 'tiny') return anz ? 'tidyhq' : 'spond';
+  if (anz) return 'revolutionise';
+  return 'spond';
+}
+
+function platformCard(key, reason, isTop) {
+  const p = PLATFORMS[key];
+  const features = p.features.map(f =>
+    `<div style="display:flex;align-items:center;gap:6px;"><span style="color:#16a34a;font-weight:700;">✓</span> ${f.replace(/&/g, '&amp;')}</div>`
+  ).join('');
+  const rating = p.rating
+    ? `<div class="rating-line"><span class="stars">★★★★★</span> <span style="font-weight:700;">${p.rating}</span></div>`
+    : '';
+  return `
+    <div class="result-card${isTop ? ' top-pick' : ''}" style="margin-bottom:24px;">
+      <div class="rank">${p.badge}</div>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+        <div class="platform-logo-placeholder" style="background:#1a56db;width:48px;height:48px;font-size:.9rem;color:#fff;display:flex;align-items:center;justify-content:center;">
+          <img src="${p.logo}" alt="${p.name} logo" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'">
+          <span style="display:none;font-weight:700;">${p.initials}</span>
+        </div>
+        <div>
+          <h3 style="margin:0;font-size:1.3rem;">${p.name}</h3>
+          ${rating}
+        </div>
+      </div>
+      <div style="background:rgba(26,86,219,.07);border-left:3px solid #1a56db;padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:16px;font-size:.9rem;line-height:1.6;">${reason}</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px;font-size:.85rem;">${features}</div>
+      <a href="${p.review}" style="font-size:.85rem;font-weight:600;">Read the full ${p.name} review →</a>
+    </div>`;
+}
 
 function selectOption(el, step) {
   el.closest('.quiz-options').querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
@@ -400,13 +462,13 @@ function updateProgress(current) {
 }
 
 function showResults() {
-  // Build a personalised reason based on answers
+  // Build a personalised reason for 360Player based on answers
   const size = answers.q1;
   const priority = answers.q2;
   const market = answers.q4;
 
   const sizeLabel = { tiny: 'small', small: 'medium-sized', medium: 'large', pro: 'professional' }[size] || '';
-  let reason = `For your ${sizeLabel} club, 360Player is the strongest fit. `;
+  let reason = `For your ${sizeLabel} club, 360Player is a strong fit. `;
 
   const features = (priority || '').split(', ');
   const wantsPerf = features.some(f => ['performance','video','training-library','session'].includes(f));
@@ -424,7 +486,12 @@ function showResults() {
     reason += ' 360Player has strong and growing adoption across the Asia Pacific region.';
   }
 
-  document.getElementById('result-reason').textContent = reason;
+  const secondKey = pickSecondPlatform(answers);
+  shownPlatforms = ['360player', secondKey];
+
+  document.getElementById('resultCards').innerHTML =
+    platformCard('360player', reason, true) +
+    platformCard(secondKey, PLATFORMS[secondKey].reason, false);
 
   document.querySelector('.quiz-step.active').classList.remove('active');
   document.getElementById('step-results').classList.add('active');
@@ -445,30 +512,36 @@ async function submitLead(e) {
   const details = document.getElementById('lead-details').value.trim();
 
   const btn = document.getElementById('leadSubmitBtn');
+  const errorEl = document.getElementById('leadError');
+  errorEl.style.display = 'none';
   btn.disabled = true;
+  const btnLabel = btn.textContent;
   btn.textContent = 'Sending...';
 
   const quizSummary = `Size: ${answers.q1 || '—'} | Features: ${answers.q2 || '—'} | Budget: ${answers.q3 || '—'} | Location: ${answers.q4 || '—'}`;
-  const taskNote = `New 360Player lead from ClubTechCompare\n\nName: ${name}\nClub: ${club}\nEmail: ${email}\nPhone: ${phone || 'not provided'}\nDetails: ${details || 'not provided'}\n\nQuiz answers: ${quizSummary}`;
+  const recommended = shownPlatforms.map(k => PLATFORMS[k].name).join(' + ');
 
   try {
-    // 1. Send email via Formspree
-    await fetch(FORMSPREE_URL, {
+    const res = await fetch(FORMSPREE_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
         name, club, email, phone, details,
+        recommended_platforms: recommended,
         quiz: quizSummary,
-        _subject: `New 360Player Lead — ${name} (${club})`,
+        _subject: `New Quiz Lead — ${name} (${club})`,
         _replyto: email
       })
     });
-
+    if (!res.ok) throw new Error('Formspree responded ' + res.status);
   } catch (err) {
     console.error('Lead submission error:', err);
+    errorEl.style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = btnLabel;
+    return;
   }
 
-  // Show success regardless (don't block user on API errors)
   document.getElementById('confirmSection').style.display = 'none';
   document.getElementById('successSection').style.display = 'block';
 
@@ -478,6 +551,7 @@ async function submitLead(e) {
 
 function restartQuiz() {
   Object.keys(answers).forEach(k => delete answers[k]);
+  shownPlatforms = [];
   document.querySelectorAll('.quiz-step').forEach(s => s.classList.remove('active'));
   document.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('selected'));
   document.querySelectorAll('.quiz-nav button[id^="next"]').forEach(b => b.disabled = true);
@@ -485,6 +559,10 @@ function restartQuiz() {
   document.getElementById('step-1').classList.add('active');
   document.getElementById('confirmSection').style.display = 'block';
   document.getElementById('successSection').style.display = 'none';
+  document.getElementById('leadError').style.display = 'none';
+  document.getElementById('leadForm').reset();
+  document.getElementById('leadSubmitBtn').disabled = false;
+  document.getElementById('leadSubmitBtn').textContent = 'Yes — Have Someone Contact Me →';
   updateProgress(1);
 }
 </script>
